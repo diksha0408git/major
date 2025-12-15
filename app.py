@@ -45,7 +45,7 @@ if not st.session_state.logged_in:
             if username == "admin" and password == "admin123":
                 st.session_state.logged_in = True
                 st.success("Login Successful")
-                st.experimental_rerun()
+                st.rerun()
             else:
                 st.error("Invalid Username or Password")
         st.markdown("</div>", unsafe_allow_html=True)
@@ -61,7 +61,7 @@ else:
         st.markdown("### 👤 User: admin")
         if st.button("Logout"):
             st.session_state.logged_in = False
-            st.experimental_rerun()
+            st.rerun()
 
     # -------------------------------------------------
     # HOSPITAL SELECTION
@@ -184,4 +184,5 @@ else:
         "**Major Project – Hospital Analytics System**  \n"
         "🔹 Secure Login  🔹 Interactive Dashboards  🔹 Dynamic Filters"
     )
+
 
