@@ -154,7 +154,7 @@ else:
         with col2:
             st.subheader("Department-wise Appointments")
             fig, ax = plt.subplots()
-            df["department"].value_counts().plot(kind="bar", ax=ax)
+            df["Department"].value_counts().plot(kind="bar", ax=ax)
             st.pyplot(fig)
 
         st.subheader("Appointments by Gender")
@@ -170,4 +170,5 @@ else:
         "**Major Project:** Hospital Data Analysis Dashboard  \n"
         "**Technologies:** Python, Pandas, Matplotlib, Seaborn, Streamlit"
     )
+
 
