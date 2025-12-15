@@ -32,7 +32,7 @@ if not st.session_state.logged_in:
         if username == USERNAME and password == PASSWORD:
             st.session_state.logged_in = True
             st.success("Login Successful")
-            st.experimental_rerun()
+            st.rerun()
         else:
             st.error("Invalid Username or Password")
 
@@ -47,7 +47,7 @@ else:
         st.write("👤 Logged in as: admin")
         if st.button("Logout"):
             st.session_state.logged_in = False
-            st.experimental_rerun()
+            st.rerun()
 
     # -------------------------------------------------
     # HOSPITAL SELECTION
@@ -170,3 +170,4 @@ else:
         "**Major Project:** Hospital Data Analysis Dashboard  \n"
         "**Technologies:** Python, Pandas, Matplotlib, Seaborn, Streamlit"
     )
+
