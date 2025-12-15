@@ -10,44 +10,46 @@ import seaborn as sns
 st.set_page_config(page_title="Hospital Dashboard", layout="wide")
 
 # -------------------------------------------------
-# SESSION STATE FOR LOGIN
+# SESSION STATE
 # -------------------------------------------------
 if "logged_in" not in st.session_state:
     st.session_state.logged_in = False
 
 # -------------------------------------------------
-# LOGIN PAGE
+# LOGIN PAGE (IMPROVED UI)
 # -------------------------------------------------
 if not st.session_state.logged_in:
 
-    st.title("🔐 Hospital Dashboard Login")
+    st.markdown("<h1 style='text-align:center;'>🏥 Hospital Dashboard</h1>", unsafe_allow_html=True)
+    st.markdown("<h4 style='text-align:center;'>Secure Login</h4>", unsafe_allow_html=True)
 
-    USERNAME = "admin"
-    PASSWORD = "admin123"
+    col1, col2, col3 = st.columns([1, 2, 1])
 
-    username = st.text_input("Username")
-    password = st.text_input("Password", type="password")
+    with col2:
+        st.markdown("### 🔐 Login")
+        username = st.text_input("Username")
+        password = st.text_input("Password", type="password")
 
-    if st.button("Login"):
-        if username == USERNAME and password == PASSWORD:
-            st.session_state.logged_in = True
-            st.success("Login Successful")
-            st.rerun()
-        else:
-            st.error("Invalid Username or Password")
+        if st.button("Login"):
+            if username == "admin" and password == "admin123":
+                st.session_state.logged_in = True
+                st.success("Login Successful")
+                st.experimental_rerun()
+            else:
+                st.error("Invalid username or password")
 
 # -------------------------------------------------
-# MAIN DASHBOARD (AFTER LOGIN)
+# MAIN DASHBOARD
 # -------------------------------------------------
 else:
-    st.title("🏥 Hospital Data Analysis Dashboard")
+    st.title("📊 Hospital Data Analysis Dashboard")
 
-    # LOGOUT BUTTON
+    # LOGOUT
     with st.sidebar:
-        st.write("👤 Logged in as: admin")
+        st.write("👤 User: admin")
         if st.button("Logout"):
             st.session_state.logged_in = False
-            st.rerun()
+            st.experimental_rerun()
 
     # -------------------------------------------------
     # HOSPITAL SELECTION
@@ -58,12 +60,12 @@ else:
     )
 
     # -------------------------------------------------
-    # LOAD DATASET
+    # LOAD DATA
     # -------------------------------------------------
     if hospital == "Hospital A (Patients)":
-        df = pd.read_csv("patients.csv")
+        df = pd.read_csv("patients_updated.csv")
     else:
-        df = pd.read_csv("appointments.csv")
+        df = pd.read_csv("appointments_updated.csv")
 
     # -------------------------------------------------
     # PREPROCESSING
@@ -72,13 +74,14 @@ else:
         if "date" in col.lower():
             df[col] = pd.to_datetime(df[col], errors="coerce")
 
-    # Add Gender if missing
     if "Gender" not in df.columns:
         np.random.seed(42)
         df["Gender"] = np.random.choice(["Male", "Female"], size=len(df))
+    else:
+        df["Gender"] = df["Gender"].fillna("Unknown")
 
     # -------------------------------------------------
-    # DATA CLEANING
+    # CLEANING
     # -------------------------------------------------
     df.drop_duplicates(inplace=True)
     df.fillna(method="ffill", inplace=True)
@@ -87,26 +90,48 @@ else:
         df = df[(df["age"] > 0) & (df["age"] < 120)]
 
     # -------------------------------------------------
-    # SIDEBAR INFO
+    # FILTERS (ADVANCED FEATURE)
     # -------------------------------------------------
-    st.sidebar.markdown("### 📊 Dashboard Info")
-    st.sidebar.write("Selected Hospital:", hospital)
-    st.sidebar.write("Total Records:", len(df))
+    st.sidebar.markdown("### 🔎 Filters")
+
+    if "Gender" in df.columns:
+        gender_filter = st.sidebar.multiselect(
+            "Select Gender",
+            df["Gender"].unique(),
+            default=df["Gender"].unique()
+        )
+        df = df[df["Gender"].isin(gender_filter)]
 
     # -------------------------------------------------
-    # SHOW DATA
+    # KPI CARDS (ADVANCED DASHBOARD)
     # -------------------------------------------------
-    st.subheader("📄 Cleaned Dataset Preview")
-    st.dataframe(df.head())
+    st.markdown("## 📌 Key Metrics")
+
+    k1, k2, k3 = st.columns(3)
+
+    k1.metric("Total Records", len(df))
+
+    if "age" in df.columns:
+        k2.metric("Average Age", round(df["age"].mean(), 1))
+    else:
+        k2.metric("Average Age", "N/A")
+
+    if "Gender" in df.columns:
+        k3.metric("Male %", round((df["Gender"] == "Male").mean() * 100, 1))
 
     # -------------------------------------------------
-    # DASHBOARD FOR HOSPITAL A (PATIENTS)
+    # DATA PREVIEW
+    # -------------------------------------------------
+    with st.expander("📄 View Cleaned Dataset"):
+        st.dataframe(df.head(20))
+
+    # -------------------------------------------------
+    # HOSPITAL A DASHBOARD
     # -------------------------------------------------
     if hospital == "Hospital A (Patients)":
 
-        st.header("📊 Patient Analysis Dashboard")
+        st.header("🧑‍⚕️ Patient Analysis")
 
-        # Length of stay
         if "arrival_date" in df.columns and "departure_date" in df.columns:
             df["Length_of_Stay"] = (
                 df["departure_date"] - df["arrival_date"]
@@ -121,46 +146,39 @@ else:
             st.pyplot(fig)
 
         with col2:
-            st.subheader("Age Distribution")
-            fig, ax = plt.subplots()
-            sns.histplot(df["age"], kde=True, ax=ax)
-            st.pyplot(fig)
+            if "age" in df.columns:
+                st.subheader("Age Distribution")
+                fig, ax = plt.subplots()
+                sns.histplot(df["age"], kde=True, ax=ax)
+                st.pyplot(fig)
 
-        st.subheader("Service-wise Patients")
-        fig, ax = plt.subplots()
-        df["service"].value_counts().plot(kind="bar", ax=ax)
-        st.pyplot(fig)
-
-        if "Length_of_Stay" in df.columns:
-            st.subheader("Average Length of Stay by Service")
+        if "service" in df.columns:
+            st.subheader("Service-wise Patients")
             fig, ax = plt.subplots()
-            df.groupby("service")["Length_of_Stay"].mean().plot(kind="bar", ax=ax)
+            df["service"].value_counts().plot(kind="bar", ax=ax)
             st.pyplot(fig)
 
     # -------------------------------------------------
-    # DASHBOARD FOR HOSPITAL B (APPOINTMENTS)
+    # HOSPITAL B DASHBOARD
     # -------------------------------------------------
     else:
-        st.header("📊 Appointment Analysis Dashboard")
+        st.header("📅 Appointment Analysis")
 
         col1, col2 = st.columns(2)
 
         with col1:
-            st.subheader("Appointment Status")
-            fig, ax = plt.subplots()
-            df["status"].value_counts().plot(kind="bar", ax=ax)
-            st.pyplot(fig)
+            if "status" in df.columns:
+                st.subheader("Appointment Status")
+                fig, ax = plt.subplots()
+                df["status"].value_counts().plot(kind="bar", ax=ax)
+                st.pyplot(fig)
 
         with col2:
-            st.subheader("Department-wise Appointments")
-            fig, ax = plt.subplots()
-            df["Department"].value_counts().plot(kind="bar", ax=ax)
-            st.pyplot(fig)
-
-        st.subheader("Appointments by Gender")
-        fig, ax = plt.subplots()
-        df["Gender"].value_counts().plot(kind="bar", ax=ax)
-        st.pyplot(fig)
+            if "department" in df.columns:
+                st.subheader("Department-wise Appointments")
+                fig, ax = plt.subplots()
+                df["department"].value_counts().plot(kind="bar", ax=ax)
+                st.pyplot(fig)
 
     # -------------------------------------------------
     # FOOTER
@@ -168,7 +186,6 @@ else:
     st.markdown("---")
     st.markdown(
         "**Major Project:** Hospital Data Analysis Dashboard  \n"
-        "**Technologies:** Python, Pandas, Matplotlib, Seaborn, Streamlit"
+        "**Advanced Features:** Login UI, KPIs, Filters, Dynamic Dashboards"
     )
-
 
