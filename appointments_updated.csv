@@ -1,0 +1,201 @@
+appointment_id,patient_id,appointment_date,appointment_time,reason_for_visit,status,gender,department
+A001,P034,2023-08-09,15:15:00,Therapy,Scheduled,Male,Cardiology
+A002,P032,2023-06-09,14:30:00,Therapy,No-show,Male,Cardiology
+A003,P048,2023-06-28,8:00:00,Consultation,Cancelled,Female,General Medicine
+A004,P025,2023-09-01,9:15:00,Consultation,Cancelled,Male,Cardiology
+A005,P040,2023-07-06,12:45:00,Emergency,No-show,Female,General Medicine
+A006,P045,2023-06-19,16:15:00,Checkup,Scheduled,Female,Orthopedics
+A007,P001,2023-04-09,10:30:00,Consultation,Scheduled,Female,Orthopedics
+A008,P016,2023-05-24,8:45:00,Consultation,Cancelled,Female,Neurology
+A009,P039,2023-03-05,13:45:00,Follow-up,Scheduled,Male,Cardiology
+A010,P005,2023-01-13,15:30:00,Therapy,Completed,Male,General Medicine
+A011,P022,2023-11-12,16:00:00,Checkup,No-show,Female,Neurology
+A012,P029,2023-05-07,10:00:00,Follow-up,Completed,Male,General Medicine
+A013,P003,2023-08-16,12:00:00,Emergency,Scheduled,Male,Neurology
+A014,P012,2023-05-25,10:30:00,Emergency,Cancelled,Male,General Medicine
+A015,P026,2023-01-15,17:15:00,Consultation,No-show,Female,Neurology
+A016,P016,2023-06-30,11:00:00,Consultation,Scheduled,Female,Cardiology
+A017,P037,2023-07-11,17:00:00,Emergency,Scheduled,Male,Neurology
+A018,P022,2023-11-14,9:45:00,Consultation,Cancelled,Male,Orthopedics
+A019,P029,2023-02-06,15:30:00,Checkup,Cancelled,Male,Pediatrics
+A020,P014,2023-12-05,15:15:00,Consultation,Completed,Male,Pediatrics
+A021,P028,2023-04-24,10:00:00,Therapy,No-show,Female,Orthopedics
+A022,P005,2023-11-14,13:00:00,Consultation,No-show,Female,General Medicine
+A023,P047,2023-05-09,14:30:00,Follow-up,Cancelled,Female,General Medicine
+A024,P049,2023-06-21,8:00:00,Checkup,Completed,Male,General Medicine
+A025,P030,2023-02-25,8:00:00,Follow-up,No-show,Male,Pediatrics
+A026,P046,2023-03-17,14:15:00,Follow-up,Cancelled,Male,Orthopedics
+A027,P005,2023-11-14,12:45:00,Therapy,Scheduled,Male,Cardiology
+A028,P012,2023-10-29,15:30:00,Checkup,No-show,Male,General Medicine
+A029,P016,2023-06-25,14:30:00,Checkup,Completed,Male,Neurology
+A030,P026,2023-08-29,13:15:00,Checkup,Completed,Male,Neurology
+A031,P026,2023-04-04,10:30:00,Checkup,Completed,Female,Neurology
+A032,P048,2023-11-06,10:45:00,Checkup,Scheduled,Female,General Medicine
+A033,P021,2023-09-23,17:45:00,Therapy,No-show,Female,Neurology
+A034,P039,2023-06-13,11:30:00,Consultation,No-show,Male,Neurology
+A035,P036,2023-04-18,8:45:00,Follow-up,Scheduled,Male,Cardiology
+A036,P033,2023-01-08,14:30:00,Checkup,No-show,Male,Orthopedics
+A037,P030,2023-03-28,11:00:00,Consultation,Scheduled,Male,Pediatrics
+A038,P037,2023-02-23,13:00:00,Consultation,Scheduled,Male,General Medicine
+A039,P023,2023-04-17,8:00:00,Follow-up,Scheduled,Female,Neurology
+A040,P010,2023-03-27,12:30:00,Therapy,Completed,Female,Cardiology
+A041,P005,2023-01-01,14:00:00,Emergency,No-show,Female,Orthopedics
+A042,P036,2023-03-21,11:15:00,Emergency,Scheduled,Male,Pediatrics
+A043,P034,2023-03-29,9:15:00,Consultation,No-show,Male,Orthopedics
+A044,P031,2023-09-20,12:30:00,Follow-up,Completed,Male,Cardiology
+A045,P010,2023-09-28,17:00:00,Emergency,Scheduled,Female,Cardiology
+A046,P019,2023-12-20,13:15:00,Consultation,Cancelled,Female,Neurology
+A047,P032,2023-05-02,11:00:00,Therapy,Completed,Male,Orthopedics
+A048,P001,2023-01-16,15:45:00,Emergency,Cancelled,Female,General Medicine
+A049,P005,2023-04-30,15:30:00,Consultation,No-show,Male,General Medicine
+A050,P045,2023-08-16,15:00:00,Consultation,No-show,Male,Cardiology
+A051,P004,2023-02-04,11:45:00,Checkup,Completed,Male,Neurology
+A052,P016,2023-07-12,9:30:00,Therapy,No-show,Female,Neurology
+A053,P024,2023-02-12,10:30:00,Checkup,Cancelled,Female,Neurology
+A054,P016,2023-12-16,11:45:00,Follow-up,Scheduled,Female,Orthopedics
+A055,P002,2023-10-06,17:30:00,Checkup,Scheduled,Female,Cardiology
+A056,P049,2023-01-02,12:45:00,Checkup,Scheduled,Male,Orthopedics
+A057,P028,2023-04-15,17:45:00,Emergency,Completed,Female,Neurology
+A058,P032,2023-05-09,13:15:00,Consultation,No-show,Female,Pediatrics
+A059,P027,2023-03-09,15:30:00,Therapy,Cancelled,Male,Cardiology
+A060,P020,2023-11-22,17:15:00,Checkup,No-show,Female,Pediatrics
+A061,P024,2023-01-15,17:00:00,Therapy,No-show,Female,General Medicine
+A062,P012,2023-06-14,15:15:00,Checkup,No-show,Female,General Medicine
+A063,P050,2023-06-29,9:00:00,Follow-up,Scheduled,Male,Orthopedics
+A064,P035,2023-05-31,8:30:00,Checkup,Cancelled,Female,General Medicine
+A065,P033,2023-04-24,15:45:00,Emergency,Cancelled,Male,Cardiology
+A066,P033,2023-05-10,11:45:00,Consultation,No-show,Female,Pediatrics
+A067,P043,2023-08-10,11:00:00,Follow-up,Scheduled,Female,Pediatrics
+A068,P037,2023-03-14,15:00:00,Checkup,Scheduled,Male,Pediatrics
+A069,P012,2023-03-29,15:30:00,Therapy,Cancelled,Female,General Medicine
+A070,P003,2023-08-26,17:00:00,Follow-up,Scheduled,Female,Pediatrics
+A071,P001,2023-01-26,17:00:00,Follow-up,Scheduled,Male,Neurology
+A072,P033,2023-06-12,13:30:00,Checkup,Scheduled,Male,Neurology
+A073,P040,2023-12-24,15:00:00,Follow-up,Completed,Female,Neurology
+A074,P010,2023-07-23,13:30:00,Therapy,No-show,Male,General Medicine
+A075,P043,2023-05-08,14:00:00,Follow-up,Cancelled,Female,General Medicine
+A076,P044,2023-11-27,12:00:00,Therapy,Cancelled,Female,General Medicine
+A077,P029,2023-12-14,17:15:00,Checkup,Completed,Female,General Medicine
+A078,P013,2023-09-17,11:15:00,Consultation,No-show,Female,Neurology
+A079,P012,2023-12-26,14:00:00,Follow-up,Cancelled,Female,Cardiology
+A080,P031,2023-06-26,8:30:00,Consultation,Scheduled,Male,Orthopedics
+A081,P046,2023-01-06,13:30:00,Therapy,Cancelled,Female,Orthopedics
+A082,P002,2023-01-20,10:45:00,Follow-up,Scheduled,Male,Neurology
+A083,P050,2023-11-07,12:30:00,Emergency,Completed,Female,Orthopedics
+A084,P035,2023-05-31,16:00:00,Consultation,Scheduled,Female,Pediatrics
+A085,P023,2023-02-18,16:15:00,Follow-up,Cancelled,Female,Cardiology
+A086,P017,2023-10-29,11:00:00,Consultation,Cancelled,Female,Cardiology
+A087,P026,2023-10-19,12:15:00,Follow-up,Cancelled,Female,Neurology
+A088,P008,2023-05-02,16:30:00,Checkup,Completed,Female,Cardiology
+A089,P029,2023-02-14,11:00:00,Consultation,Completed,Male,Neurology
+A090,P026,2023-06-01,17:30:00,Emergency,No-show,Male,General Medicine
+A091,P010,2023-06-11,13:15:00,Emergency,Cancelled,Female,Pediatrics
+A092,P026,2023-01-30,14:15:00,Therapy,Scheduled,Male,Cardiology
+A093,P034,2023-04-09,9:30:00,Follow-up,Completed,Female,General Medicine
+A094,P041,2023-04-08,8:45:00,Consultation,Cancelled,Female,Pediatrics
+A095,P007,2023-05-09,10:15:00,Therapy,Cancelled,Male,General Medicine
+A096,P004,2023-07-07,15:00:00,Consultation,Completed,Female,Pediatrics
+A097,P050,2023-05-06,14:45:00,Follow-up,No-show,Female,Neurology
+A098,P045,2023-03-17,13:00:00,Emergency,Completed,Female,General Medicine
+A099,P011,2023-07-04,15:00:00,Checkup,Completed,Male,Cardiology
+A100,P029,2023-03-02,8:00:00,Emergency,Scheduled,Male,Cardiology
+A101,P036,2023-09-21,13:15:00,Therapy,Scheduled,Female,Cardiology
+A102,P025,2023-10-25,9:00:00,Checkup,No-show,Female,Orthopedics
+A103,P021,2023-01-24,8:30:00,Therapy,Cancelled,Female,Orthopedics
+A104,P036,2023-04-18,8:45:00,Follow-up,Completed,Male,Cardiology
+A105,P010,2023-08-14,16:00:00,Checkup,No-show,Male,Pediatrics
+A106,P037,2023-10-29,11:15:00,Therapy,Scheduled,Female,Orthopedics
+A107,P009,2023-04-17,13:45:00,Follow-up,Completed,Female,Pediatrics
+A108,P024,2023-04-21,15:00:00,Emergency,Cancelled,Female,Pediatrics
+A109,P035,2023-07-29,14:00:00,Follow-up,Scheduled,Male,Neurology
+A110,P049,2023-07-19,14:30:00,Consultation,Scheduled,Female,Neurology
+A111,P035,2023-05-22,15:30:00,Follow-up,Scheduled,Male,Pediatrics
+A112,P048,2023-01-11,8:00:00,Follow-up,No-show,Male,Orthopedics
+A113,P036,2023-11-24,15:30:00,Consultation,Cancelled,Male,Neurology
+A114,P018,2023-08-08,9:00:00,Therapy,Completed,Female,General Medicine
+A115,P049,2023-10-25,10:30:00,Therapy,No-show,Female,General Medicine
+A116,P039,2023-07-07,9:15:00,Follow-up,No-show,Female,General Medicine
+A117,P032,2023-06-20,13:45:00,Consultation,No-show,Female,Cardiology
+A118,P024,2023-08-09,8:15:00,Consultation,Scheduled,Female,General Medicine
+A119,P023,2023-12-18,13:30:00,Emergency,Cancelled,Male,General Medicine
+A120,P032,2023-12-08,11:00:00,Therapy,No-show,Male,Neurology
+A121,P037,2023-04-07,15:00:00,Checkup,Completed,Male,Orthopedics
+A122,P012,2023-07-11,14:30:00,Therapy,Cancelled,Female,General Medicine
+A123,P049,2023-02-28,10:45:00,Therapy,Completed,Female,Pediatrics
+A124,P013,2023-03-16,17:15:00,Emergency,Cancelled,Male,General Medicine
+A125,P023,2023-02-18,10:15:00,Checkup,Completed,Female,Pediatrics
+A126,P025,2023-11-02,9:45:00,Emergency,Scheduled,Male,Orthopedics
+A127,P035,2023-11-13,8:30:00,Checkup,No-show,Female,Pediatrics
+A128,P041,2023-04-15,14:45:00,Follow-up,Completed,Female,Orthopedics
+A129,P030,2023-08-25,9:30:00,Checkup,Cancelled,Female,Neurology
+A130,P017,2023-02-23,15:00:00,Emergency,No-show,Female,Pediatrics
+A131,P049,2023-05-11,16:30:00,Therapy,No-show,Male,General Medicine
+A132,P020,2023-07-26,10:45:00,Checkup,Cancelled,Male,Orthopedics
+A133,P048,2023-03-23,14:30:00,Checkup,Completed,Male,Neurology
+A134,P025,2023-10-17,15:15:00,Consultation,Scheduled,Female,Pediatrics
+A135,P022,2023-09-09,16:30:00,Therapy,Scheduled,Male,Neurology
+A136,P013,2023-05-13,12:30:00,Follow-up,Completed,Female,Pediatrics
+A137,P019,2023-10-25,10:00:00,Emergency,No-show,Female,General Medicine
+A138,P049,2023-12-26,15:15:00,Follow-up,No-show,Female,Orthopedics
+A139,P036,2023-10-10,10:45:00,Therapy,No-show,Male,General Medicine
+A140,P012,2023-02-05,15:15:00,Checkup,No-show,Female,Pediatrics
+A141,P041,2023-06-15,15:15:00,Checkup,Completed,Female,Neurology
+A142,P019,2023-11-01,11:45:00,Therapy,No-show,Male,General Medicine
+A143,P012,2023-09-21,12:15:00,Checkup,Cancelled,Male,General Medicine
+A144,P009,2023-08-16,12:15:00,Checkup,No-show,Female,Pediatrics
+A145,P007,2023-11-11,14:45:00,Checkup,Scheduled,Female,Pediatrics
+A146,P028,2023-01-05,9:30:00,Emergency,No-show,Male,Orthopedics
+A147,P014,2023-11-13,17:30:00,Emergency,Completed,Male,Neurology
+A148,P031,2023-12-06,8:30:00,Consultation,Scheduled,Male,Orthopedics
+A149,P019,2023-07-26,12:30:00,Follow-up,Completed,Female,Neurology
+A150,P047,2023-08-16,10:45:00,Therapy,Completed,Male,Cardiology
+A151,P016,2023-01-28,9:15:00,Therapy,Scheduled,Male,Neurology
+A152,P005,2023-04-14,8:30:00,Therapy,Completed,Male,Cardiology
+A153,P035,2023-07-08,12:45:00,Consultation,Completed,Female,Neurology
+A154,P012,2023-03-06,17:30:00,Emergency,No-show,Male,Orthopedics
+A155,P025,2023-01-03,9:30:00,Consultation,Cancelled,Female,Pediatrics
+A156,P021,2023-11-22,14:30:00,Therapy,Completed,Female,Neurology
+A157,P036,2023-05-12,11:00:00,Follow-up,Completed,Male,General Medicine
+A158,P023,2023-07-12,12:15:00,Checkup,Completed,Female,Orthopedics
+A159,P016,2023-04-08,16:15:00,Emergency,No-show,Female,General Medicine
+A160,P039,2023-12-17,12:45:00,Emergency,Cancelled,Male,Pediatrics
+A161,P045,2023-06-17,10:45:00,Consultation,Scheduled,Female,Cardiology
+A162,P042,2023-01-01,17:15:00,Emergency,No-show,Male,Orthopedics
+A163,P039,2023-06-27,15:00:00,Therapy,No-show,Female,Cardiology
+A164,P014,2023-07-28,17:15:00,Therapy,Cancelled,Male,Orthopedics
+A165,P031,2023-04-04,15:30:00,Consultation,Cancelled,Male,Cardiology
+A166,P005,2023-01-12,14:45:00,Therapy,No-show,Male,General Medicine
+A167,P035,2023-11-15,8:15:00,Follow-up,Scheduled,Female,Orthopedics
+A168,P023,2023-09-29,10:00:00,Consultation,No-show,Male,General Medicine
+A169,P029,2023-07-24,16:45:00,Follow-up,Cancelled,Male,Pediatrics
+A170,P043,2023-03-03,9:00:00,Checkup,Scheduled,Female,Orthopedics
+A171,P011,2023-04-18,16:30:00,Follow-up,Cancelled,Female,General Medicine
+A172,P018,2023-03-09,16:15:00,Checkup,Scheduled,Male,General Medicine
+A173,P047,2023-06-04,13:30:00,Checkup,Completed,Male,Neurology
+A174,P012,2023-10-31,11:15:00,Follow-up,Cancelled,Male,Pediatrics
+A175,P009,2023-10-22,17:00:00,Consultation,Cancelled,Male,Neurology
+A176,P010,2023-04-26,9:30:00,Therapy,No-show,Male,Orthopedics
+A177,P044,2023-08-16,12:30:00,Therapy,Cancelled,Female,Neurology
+A178,P017,2023-01-17,13:15:00,Checkup,Cancelled,Male,Orthopedics
+A179,P038,2023-03-08,12:15:00,Checkup,Completed,Male,Neurology
+A180,P007,2023-01-07,11:00:00,Consultation,Cancelled,Female,Neurology
+A181,P046,2023-09-03,13:15:00,Emergency,Completed,Male,Neurology
+A182,P013,2023-04-12,8:00:00,Follow-up,Completed,Male,Neurology
+A183,P040,2023-02-03,16:15:00,Checkup,Completed,Male,General Medicine
+A184,P042,2023-02-26,17:45:00,Therapy,Completed,Female,General Medicine
+A185,P009,2023-03-21,14:00:00,Consultation,Scheduled,Male,Orthopedics
+A186,P050,2023-03-27,17:15:00,Follow-up,No-show,Male,Orthopedics
+A187,P027,2023-02-13,12:30:00,Consultation,Scheduled,Male,Orthopedics
+A188,P002,2023-04-12,16:30:00,Follow-up,Cancelled,Female,Orthopedics
+A189,P005,2023-10-05,13:30:00,Follow-up,Scheduled,Female,Orthopedics
+A190,P029,2023-11-16,15:15:00,Checkup,Scheduled,Female,Pediatrics
+A191,P037,2023-04-12,16:00:00,Consultation,Cancelled,Male,Cardiology
+A192,P038,2023-08-31,14:15:00,Consultation,Cancelled,Male,Pediatrics
+A193,P019,2023-09-15,8:15:00,Therapy,Cancelled,Female,Orthopedics
+A194,P008,2023-04-06,12:45:00,Therapy,Scheduled,Female,Cardiology
+A195,P048,2023-08-19,17:15:00,Checkup,Scheduled,Male,Pediatrics
+A196,P045,2023-10-26,9:45:00,Checkup,Cancelled,Male,Orthopedics
+A197,P001,2023-04-01,13:30:00,Emergency,No-show,Female,General Medicine
+A198,P022,2023-05-15,8:30:00,Therapy,No-show,Female,Orthopedics
+A199,P017,2023-05-01,12:45:00,Follow-up,Completed,Female,General Medicine
+A200,P007,2023-12-30,10:15:00,Consultation,Cancelled,Male,Orthopedics
