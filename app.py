@@ -6,7 +6,10 @@ import plotly.express as px
 # -------------------------------------------------
 # PAGE CONFIG
 # -------------------------------------------------
-st.set_page_config(page_title="Hospital Dashboard", layout="wide")
+st.set_page_config(
+    page_title="Hospital Analytics System",
+    layout="wide"
+)
 
 # -------------------------------------------------
 # SESSION STATE
@@ -15,18 +18,18 @@ if "logged_in" not in st.session_state:
     st.session_state.logged_in = False
 
 # -------------------------------------------------
-# LOGIN PAGE (PROFESSIONAL UI)
+# LOGIN PAGE
 # -------------------------------------------------
 if not st.session_state.logged_in:
 
     st.markdown("""
         <style>
-            .login-box {
-                background-color: #ffffff;
-                padding: 30px;
-                border-radius: 10px;
-                box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
-            }
+        .login-box {
+            background-color: #ffffff;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
+        }
         </style>
     """, unsafe_allow_html=True)
 
@@ -39,13 +42,13 @@ if not st.session_state.logged_in:
     with col2:
         st.markdown("<div class='login-box'>", unsafe_allow_html=True)
         username = st.text_input("👤 Username")
-        password = st.text_input("🔑 Password", type="password")
+        password = st.text_input("🔐 Password", type="password")
 
         if st.button("Login"):
             if username == "admin" and password == "admin123":
                 st.session_state.logged_in = True
                 st.success("Login Successful")
-                st.rerun()
+                st.experimental_rerun()
             else:
                 st.error("Invalid Username or Password")
         st.markdown("</div>", unsafe_allow_html=True)
@@ -61,35 +64,30 @@ else:
         st.markdown("### 👤 User: admin")
         if st.button("Logout"):
             st.session_state.logged_in = False
-            st.rerun()
+            st.experimental_rerun()
 
     # -------------------------------------------------
     # HOSPITAL SELECTION
     # -------------------------------------------------
     hospital = st.selectbox(
-        "🏥 Select Hospital",
-        ["Hospital A (Patients)", "Hospital B (Appointments)"]
+        "🏥 Select Hospital Dataset",
+        ["Hospital A – Patients", "Hospital B – Appointments"]
     )
 
     # -------------------------------------------------
     # LOAD DATA
     # -------------------------------------------------
-    if hospital == "Hospital A (Patients)":
+    if hospital == "Hospital A – Patients":
         df = pd.read_csv("patients_updated.csv")
     else:
         df = pd.read_csv("appointments_updated.csv")
 
     # -------------------------------------------------
-    # PREPROCESSING & CLEANING
+    # PREPROCESSING
     # -------------------------------------------------
     for col in df.columns:
         if "date" in col.lower():
             df[col] = pd.to_datetime(df[col], errors="coerce")
-
-    if "Gender" not in df.columns:
-        df["Gender"] = np.random.choice(["Male", "Female"], size=len(df))
-    else:
-        df["Gender"] = df["Gender"].fillna("Unknown")
 
     df.drop_duplicates(inplace=True)
     df.fillna(method="ffill", inplace=True)
@@ -99,18 +97,27 @@ else:
     # -------------------------------------------------
     st.sidebar.markdown("### 🔎 Filters")
 
-    if "Gender" in df.columns:
+    if "gender" in df.columns:
         gender_filter = st.sidebar.multiselect(
-            "Select Gender",
-            df["Gender"].unique(),
-            default=df["Gender"].unique()
+            "Gender",
+            df["gender"].unique(),
+            default=df["gender"].unique()
         )
-        df = df[df["Gender"].isin(gender_filter)]
+        df = df[df["gender"].isin(gender_filter)]
+
+    if "bed_availability" in df.columns:
+        bed_filter = st.sidebar.multiselect(
+            "Bed Availability",
+            df["bed_availability"].unique(),
+            default=df["bed_availability"].unique()
+        )
+        df = df[df["bed_availability"].isin(bed_filter)]
 
     # -------------------------------------------------
-    # KPI CARDS
+    # KPI METRICS
     # -------------------------------------------------
     st.markdown("## 📌 Key Metrics")
+
     k1, k2, k3 = st.columns(3)
 
     k1.metric("Total Records", len(df))
@@ -120,59 +127,83 @@ else:
     else:
         k2.metric("Average Age", "N/A")
 
-    k3.metric("Unique Genders", df["Gender"].nunique())
+    if "bed_availability" in df.columns:
+        k3.metric(
+            "Beds Available (%)",
+            round((df["bed_availability"] == "Available").mean() * 100, 1)
+        )
 
     # -------------------------------------------------
     # DATA PREVIEW
     # -------------------------------------------------
-    with st.expander("📄 View Dataset"):
-        st.dataframe(df.head(20))
+    with st.expander("📄 View Cleaned Dataset"):
+        st.dataframe(df.head(25))
 
     # -------------------------------------------------
-    # HOSPITAL A DASHBOARD
+    # PATIENTS DASHBOARD
     # -------------------------------------------------
-    if hospital == "Hospital A (Patients)":
+    if hospital == "Hospital A – Patients":
         st.header("🧑‍⚕️ Patient Analytics")
-
-        if "service" in df.columns:
-            fig = px.bar(
-                df,
-                x="service",
-                title="Patients per Service",
-                color="Gender"
-            )
-            st.plotly_chart(fig, use_container_width=True)
-
-        if "age" in df.columns:
-            fig = px.histogram(
-                df,
-                x="age",
-                nbins=20,
-                title="Age Distribution",
-                color="Gender"
-            )
-            st.plotly_chart(fig, use_container_width=True)
-
-    # -------------------------------------------------
-    # HOSPITAL B DASHBOARD
-    # -------------------------------------------------
-    else:
-        st.header("📅 Appointment Analytics")
 
         if "department" in df.columns:
             fig = px.bar(
                 df,
                 x="department",
-                title="Appointments by Department",
-                color="Gender"
+                color="bed_availability",
+                title="Patients by Department & Bed Availability"
             )
             st.plotly_chart(fig, use_container_width=True)
 
-        if "status" in df.columns:
+        if "service" in df.columns:
             fig = px.pie(
                 df,
-                names="status",
-                title="Appointment Status Distribution"
+                names="service",
+                title="Service-wise Patient Distribution"
+            )
+            st.plotly_chart(fig, use_container_width=True)
+
+        if "arrival_date" in df.columns and "departure_date" in df.columns:
+            df["length_of_stay"] = (
+                df["departure_date"] - df["arrival_date"]
+            ).dt.days
+
+            fig = px.box(
+                df,
+                x="department",
+                y="length_of_stay",
+                title="Length of Stay by Department"
+            )
+            st.plotly_chart(fig, use_container_width=True)
+
+    # -------------------------------------------------
+    # APPOINTMENTS DASHBOARD
+    # -------------------------------------------------
+    else:
+        st.header("📅 Appointment Analytics")
+
+        if "status" in df.columns:
+            fig = px.bar(
+                df,
+                x="status",
+                color="bed_availability",
+                title="Appointment Status vs Bed Availability"
+            )
+            st.plotly_chart(fig, use_container_width=True)
+
+        if "department" in df.columns:
+            fig = px.bar(
+                df,
+                x="department",
+                color="gender",
+                title="Appointments by Department & Gender"
+            )
+            st.plotly_chart(fig, use_container_width=True)
+
+        if "discharge_date" in df.columns:
+            fig = px.histogram(
+                df,
+                x="discharge_date",
+                title="Discharge Date Distribution"
             )
             st.plotly_chart(fig, use_container_width=True)
 
@@ -182,7 +213,6 @@ else:
     st.markdown("---")
     st.markdown(
         "**Major Project – Hospital Analytics System**  \n"
-        "🔹 Secure Login  🔹 Interactive Dashboards  🔹 Dynamic Filters"
+        "🔹 Secure Login  🔹 Interactive Charts  🔹 Real-world Hospital KPIs"
     )
-
 
