@@ -4,29 +4,35 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-from sklearn.preprocessing import StandardScaler
+import sqlite3
 from statsmodels.tsa.arima.model import ARIMA
 
 # ===================== PAGE CONFIG =====================
 st.set_page_config(
-    page_title="Hospital Analytics System",
+    page_title="Hospital Analytics Dashboard",
     page_icon="🏥",
     layout="wide"
 )
 
-# ===================== LOGIN UI =====================
+# ===================== SESSION STATE =====================
+if "login" not in st.session_state:
+    st.session_state.login = False
+if "hospital" not in st.session_state:
+    st.session_state.hospital = None
+
+# ===================== LOGIN PAGE =====================
 def login_page():
     st.markdown("""
-        <style>
-        .login-box {
-            background-color:#0f172a;
-            padding:30px;
-            border-radius:12px;
-            width:420px;
-            margin:auto;
-            box-shadow:0px 0px 25px rgba(0,0,0,0.6);
-        }
-        </style>
+    <style>
+    .login-box {
+        background-color:#0f172a;
+        padding:30px;
+        border-radius:12px;
+        width:420px;
+        margin:auto;
+        box-shadow:0 0 25px rgba(0,0,0,0.6);
+    }
+    </style>
     """, unsafe_allow_html=True)
 
     st.markdown("<div class='login-box'>", unsafe_allow_html=True)
@@ -35,79 +41,117 @@ def login_page():
     with st.form("login_form"):
         username = st.text_input("Username")
         password = st.text_input("Password", type="password")
-        hospital = st.text_input("Hospital Name (Hospital1 / Hospital2)")
-        login = st.form_submit_button("Login")
+        hospital = st.selectbox("Select Hospital", ["Hospital1", "Hospital2"])
+        btn = st.form_submit_button("Login")
 
-    if login:
+    if btn:
         if username == "admin" and password == "admin123":
-            st.session_state.logged_in = True
+            st.session_state.login = True
             st.session_state.hospital = hospital
-            st.success("Login Successful")
             st.rerun()
         else:
             st.error("Invalid Credentials")
 
     st.markdown("</div>", unsafe_allow_html=True)
 
-if "logged_in" not in st.session_state:
-    st.session_state.logged_in = False
-
-if not st.session_state.logged_in:
+if not st.session_state.login:
     login_page()
     st.stop()
 
 # ===================== LOAD DATA =====================
-def load_dataset(hospital):
-    if hospital.lower() == "hospital1":
-        return pd.read_csv("patients_final.csv")
-    elif hospital.lower() == "hospital2":
-        return pd.read_csv("appointments_final.csv")
-    else:
-        return None
+if st.session_state.hospital == "Hospital1":
+    df = pd.read_csv("patients_final.csv")
+else:
+    df = pd.read_csv("appointments_final.csv")
 
-df = load_dataset(st.session_state.hospital)
-
-if df is None:
-    st.error("Invalid Hospital Name")
-    st.stop()
+# ===================== SQLITE CONNECTION =====================
+def load_from_db():
+    conn = sqlite3.connect("hospital.db")   # same DB as Jupyter
+    data = pd.read_sql("SELECT * FROM hospital_data", conn)
+    conn.close()
+    return data
 
 # ===================== SIDEBAR =====================
-st.sidebar.title("🏥 Dashboard Menu")
-st.sidebar.write(f"Hospital: **{st.session_state.hospital}**")
-
-menu = st.sidebar.radio(
-    "Select Module",
-    ["EDA", "Visualization", "Correlation", "Forecasting"]
+st.sidebar.title("📌 Navigation")
+page = st.sidebar.radio(
+    "Go To",
+    ["Dashboard", "EDA", "Visualizations", "Correlation", "Forecasting", "Database"]
 )
 
+st.sidebar.markdown("---")
+st.sidebar.write("🏥 Hospital:", st.session_state.hospital)
+
 if st.sidebar.button("Logout"):
-    st.session_state.logged_in = False
+    st.session_state.login = False
     st.rerun()
 
+# ===================== KPI FUNCTIONS =====================
+def patient_kpis(df):
+    c1, c2, c3, c4 = st.columns(4)
+    c1.metric("Total Patients", len(df))
+    c2.metric("Average Age", round(df["age"].mean(), 1))
+    c3.metric("Male Patients", (df["gender"] == "Male").sum())
+    c4.metric("Beds Available", df["bed_availability"].sum())
+
+def appointment_kpis(df):
+    c1, c2, c3, c4 = st.columns(4)
+    c1.metric("Total Appointments", len(df))
+    c2.metric("Completed", (df["status"] == "Completed").sum())
+    c3.metric("Pending", (df["status"] == "Pending").sum())
+    c4.metric("Avg Age", round(df["age"].mean(), 1))
+
+# ===================== DASHBOARD =====================
+if page == "Dashboard":
+    st.title("🏥 Hospital Dashboard")
+
+    if st.session_state.hospital == "Hospital1":
+        patient_kpis(df)
+
+        col1, col2 = st.columns(2)
+        with col1:
+            fig, ax = plt.subplots()
+            ax.hist(df["age"], bins=20)
+            ax.set_title("Age Distribution")
+            st.pyplot(fig)
+
+        with col2:
+            fig, ax = plt.subplots()
+            df["gender"].value_counts().plot.pie(autopct="%1.1f%%", ax=ax)
+            ax.set_ylabel("")
+            ax.set_title("Gender Distribution")
+            st.pyplot(fig)
+
+    else:
+        appointment_kpis(df)
+
+        col1, col2 = st.columns(2)
+        with col1:
+            fig, ax = plt.subplots()
+            df["department"].value_counts().plot.bar(ax=ax)
+            ax.set_title("Appointments by Department")
+            st.pyplot(fig)
+
+        with col2:
+            fig, ax = plt.subplots()
+            df["status"].value_counts().plot.pie(autopct="%1.1f%%", ax=ax)
+            ax.set_ylabel("")
+            ax.set_title("Appointment Status")
+            st.pyplot(fig)
+
 # ===================== EDA =====================
-def eda_section(df):
-    st.subheader("📊 Exploratory Data Analysis")
-
-    c1, c2, c3 = st.columns(3)
-    c1.metric("Rows", df.shape[0])
-    c2.metric("Columns", df.shape[1])
-    c3.metric("Missing Values", df.isnull().sum().sum())
-
-    st.markdown("### Dataset Preview")
+elif page == "EDA":
+    st.title("📊 Exploratory Data Analysis")
     st.dataframe(df.head())
-
-    st.markdown("### Statistical Summary")
     st.dataframe(df.describe())
-
-    st.markdown("### Missing Values")
+    st.write("Missing Values")
     st.write(df.isnull().sum())
 
-# ===================== VISUALIZATION =====================
-def visualization_section(df):
-    st.subheader("📈 Advanced Visualizations")
+# ===================== VISUALIZATIONS =====================
+elif page == "Visualizations":
+    st.title("📈 Advanced Visualizations")
 
     num_cols = df.select_dtypes(include=np.number).columns
-    cat_cols = df.select_dtypes(include='object').columns
+    cat_cols = df.select_dtypes(include="object").columns
 
     chart = st.selectbox(
         "Select Chart Type",
@@ -123,19 +167,19 @@ def visualization_section(df):
     elif chart == "Bar Chart":
         col = st.selectbox("Column", cat_cols)
         fig, ax = plt.subplots()
-        df[col].value_counts().plot(kind="bar", ax=ax)
+        df[col].value_counts().plot.bar(ax=ax)
         st.pyplot(fig)
 
     elif chart == "Pie Chart":
         col = st.selectbox("Column", cat_cols)
         fig, ax = plt.subplots()
-        df[col].value_counts().plot(kind="pie", autopct="%1.1f%%", ax=ax)
+        df[col].value_counts().plot.pie(autopct="%1.1f%%", ax=ax)
         ax.set_ylabel("")
         st.pyplot(fig)
 
     elif chart == "Scatter Plot":
-        x = st.selectbox("X-axis", num_cols)
-        y = st.selectbox("Y-axis", num_cols)
+        x = st.selectbox("X Axis", num_cols)
+        y = st.selectbox("Y Axis", num_cols)
         fig, ax = plt.subplots()
         ax.scatter(df[x], df[y])
         st.pyplot(fig)
@@ -147,56 +191,72 @@ def visualization_section(df):
         st.pyplot(fig)
 
 # ===================== CORRELATION =====================
-def correlation_section(df):
-    st.subheader("🔥 Correlation Heatmap")
-
+elif page == "Correlation":
+    st.title("🔥 Correlation Heatmap")
     num_df = df.select_dtypes(include=np.number)
-
-    fig, ax = plt.subplots(figsize=(10,6))
-    sns.heatmap(
-        num_df.corr(),
-        annot=True,
-        cmap="coolwarm",
-        ax=ax
-    )
+    fig, ax = plt.subplots(figsize=(10, 6))
+    sns.heatmap(num_df.corr(), annot=True, cmap="coolwarm", ax=ax)
     st.pyplot(fig)
 
 # ===================== FORECASTING =====================
-def forecasting_section(df):
-    st.subheader("🔮 Forecasting")
+elif page == "Forecasting":
+    st.title("🔮 Forecasting (ARIMA)")
 
-    num_cols = df.select_dtypes(include=np.number).columns
-    target = st.selectbox("Target Column", num_cols)
+    num_cols = df.select_dtypes(include=np.number).columns.tolist()
 
-    try:
-        model = ARIMA(df[target], order=(1,1,1))
-        model_fit = model.fit()
-        forecast = model_fit.forecast(steps=10)
+    if len(num_cols) < 1:
+        st.warning("No numeric column available for forecasting")
+    else:
+        target = st.selectbox("Select Target Column", num_cols)
 
-        st.markdown("### Future 10 Predictions")
-        st.write(forecast)
+        if df[target].dropna().shape[0] < 20:
+            st.warning("Not enough data for forecasting")
+        else:
+            model = ARIMA(df[target].dropna(), order=(1,1,1))
+            model_fit = model.fit()
+            forecast = model_fit.forecast(steps=10)
 
-        fig, ax = plt.subplots()
-        ax.plot(df[target], label="Actual")
-        ax.plot(range(len(df), len(df)+10), forecast, label="Forecast")
-        ax.legend()
-        st.pyplot(fig)
+            st.subheader("Next 10 Predictions")
+            st.write(forecast)
 
-    except:
-        st.error("Forecasting not possible for this column")
+            fig, ax = plt.subplots()
+            ax.plot(df[target], label="Actual")
+            ax.plot(range(len(df), len(df)+10), forecast, label="Forecast")
+            ax.legend()
+            st.pyplot(fig)
 
-# ===================== MAIN =====================
-st.title("🏥 Hospital Analytics Dashboard")
+# ===================== DATABASE =====================
+elif page == "Database":
+    st.title("🗄 SQLite Database View")
+    db_df = load_from_db()
+    st.dataframe(db_df)
 
-if menu == "EDA":
-    eda_section(df)
+# ===================== FOOTER =====================
+st.markdown("<br><br><br>", unsafe_allow_html=True)
 
-elif menu == "Visualization":
-    visualization_section(df)
+st.markdown(f"""
+<style>
+.footer {{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #020617;
+    color: #94a3b8;
+    text-align: center;
+    padding: 10px;
+    font-size: 13px;
+    border-top: 1px solid #1e293b;
+    z-index: 999;
+}}
+</style>
 
-elif menu == "Correlation":
-    correlation_section(df)
+<div class="footer">
+    🏥 Hospital Analytics Dashboard v1.0 |
+    Hospital: <b>{st.session_state.hospital}</b> |
+    Logged in as: <b>Admin</b> |
+    © 2026 Diksha Tiwari
+</div>
+""", unsafe_allow_html=True)
 
-elif menu == "Forecasting":
-    forecasting_section(df)
 
