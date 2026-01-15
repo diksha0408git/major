@@ -1,0 +1,1001 @@
+patient_id,age,arrival_date,departure_date,service,gender,department,bed_availability
+PAT-09484753,24,2025-03-16,2025-03-22,surgery,Male,Neurology,Available
+PAT-f0644084,6,2025-12-13,2025-12-14,surgery,Male,Orthopedics,Occupied
+PAT-ac6162e4,24,2025-06-29,2025-07-05,general_medicine,Male,Cardiology,Available
+PAT-3dda2bb5,32,2025-10-12,2025-10-23,emergency,Male,Pediatrics,Available
+PAT-08591375,25,2025-02-18,2025-02-25,ICU,Male,Cardiology,Available
+PAT-f4b29bae,83,2025-06-26,2025-06-30,emergency,Female,Pediatrics,Occupied
+PAT-283cda07,62,2025-12-26,2025-12-27,emergency,Female,Orthopedics,Available
+PAT-5b61868c,0,2025-05-21,2025-06-04,ICU,Female,Pediatrics,Available
+PAT-f9c8afa6,50,2025-07-30,2025-08-13,general_medicine,Female,General Medicine,Available
+PAT-5290be70,29,2025-11-01,2025-11-14,emergency,Female,General Medicine,Occupied
+PAT-003ce690,29,2025-01-19,2025-01-21,ICU,Male,Cardiology,Available
+PAT-18f78014,77,2025-06-24,2025-06-26,general_medicine,Male,Cardiology,Available
+PAT-69dc0dc1,37,2025-11-15,2025-11-19,general_medicine,Male,Pediatrics,Available
+PAT-95afe21e,7,2025-02-24,2025-03-03,emergency,Male,Cardiology,Available
+PAT-cc50ad71,31,2025-06-11,2025-06-23,surgery,Female,Gynecology,Occupied
+PAT-0beb4754,86,2025-10-15,2025-10-17,general_medicine,Male,Orthopedics,Available
+PAT-3223420e,7,2025-11-09,2025-11-16,emergency,Male,Orthopedics,Occupied
+PAT-f0682772,87,2025-09-12,2025-09-25,general_medicine,Female,Pediatrics,Occupied
+PAT-af65396f,53,2025-08-27,2025-09-01,emergency,Female,Cardiology,Occupied
+PAT-dbbf6d1f,50,2025-04-02,2025-04-10,emergency,Female,Orthopedics,Available
+PAT-5e3f8747,34,2025-03-29,2025-04-12,ICU,Female,Cardiology,Occupied
+PAT-ba5529f4,45,2025-06-14,2025-06-20,general_medicine,Male,Gynecology,Available
+PAT-208fd478,13,2025-11-07,2025-11-09,general_medicine,Male,Neurology,Occupied
+PAT-127ca40e,73,2025-06-10,2025-06-17,general_medicine,Male,Neurology,Occupied
+PAT-f70aeea1,18,2025-02-05,2025-02-18,ICU,Male,General Medicine,Occupied
+PAT-9bc45d47,1,2025-10-30,2025-11-04,emergency,Male,Pediatrics,Occupied
+PAT-13c9b20f,10,2025-07-14,2025-07-21,surgery,Male,Gynecology,Occupied
+PAT-cd63d937,19,2025-10-20,2025-10-26,emergency,Male,General Medicine,Occupied
+PAT-1bc22a80,8,2025-02-22,2025-03-06,surgery,Female,Cardiology,Occupied
+PAT-5044053e,85,2025-10-07,2025-10-08,ICU,Female,Neurology,Occupied
+PAT-f3846605,29,2025-02-28,2025-03-14,ICU,Male,Gynecology,Available
+PAT-736d270f,80,2025-04-25,2025-04-26,surgery,Male,General Medicine,Available
+PAT-af250ef4,8,2025-08-25,2025-09-03,ICU,Female,Cardiology,Occupied
+PAT-eacf84b5,72,2025-10-05,2025-10-16,surgery,Female,General Medicine,Occupied
+PAT-8029775b,25,2025-01-29,2025-02-11,surgery,Female,Pediatrics,Occupied
+PAT-9ba7a6ee,86,2025-03-16,2025-03-22,emergency,Female,Cardiology,Available
+PAT-029113eb,84,2025-12-22,2025-12-31,surgery,Female,Neurology,Occupied
+PAT-44c855d4,33,2025-06-14,2025-06-23,emergency,Female,Neurology,Available
+PAT-8b1e87b0,75,2025-04-27,2025-05-07,general_medicine,Male,Cardiology,Available
+PAT-fade1b7b,84,2025-11-09,2025-11-15,general_medicine,Female,Neurology,Available
+PAT-d4f82ecb,39,2025-09-25,2025-10-08,surgery,Male,Neurology,Available
+PAT-5b51b470,9,2025-07-09,2025-07-19,emergency,Male,Orthopedics,Available
+PAT-cb6b3892,53,2025-07-12,2025-07-15,general_medicine,Female,Cardiology,Occupied
+PAT-87783e44,25,2025-05-29,2025-06-09,emergency,Male,Neurology,Occupied
+PAT-33d8d801,10,2025-06-13,2025-06-14,ICU,Male,Orthopedics,Occupied
+PAT-48f61d27,53,2025-02-24,2025-03-04,surgery,Female,Gynecology,Occupied
+PAT-24a653c8,68,2025-10-16,2025-10-26,ICU,Male,Cardiology,Occupied
+PAT-0d00ca2c,19,2025-08-15,2025-08-19,general_medicine,Male,Gynecology,Available
+PAT-70057243,61,2025-12-31,2026-01-11,general_medicine,Male,Orthopedics,Occupied
+PAT-84559395,72,2025-03-14,2025-03-23,surgery,Male,General Medicine,Occupied
+PAT-581a47d8,16,2025-08-05,2025-08-18,emergency,Male,Cardiology,Available
+PAT-851d3ef5,41,2025-02-08,2025-02-11,emergency,Female,General Medicine,Occupied
+PAT-a2c2be76,43,2025-04-12,2025-04-14,general_medicine,Male,Pediatrics,Available
+PAT-ae81e45f,18,2025-02-13,2025-02-24,emergency,Male,General Medicine,Occupied
+PAT-51e4d298,73,2025-11-07,2025-11-08,emergency,Female,Pediatrics,Available
+PAT-deada259,61,2025-08-04,2025-08-07,ICU,Female,General Medicine,Occupied
+PAT-73381b12,20,2025-08-03,2025-08-08,emergency,Female,Neurology,Occupied
+PAT-4275a12b,69,2025-01-25,2025-01-27,ICU,Female,Orthopedics,Available
+PAT-a4a957cb,11,2025-02-28,2025-03-10,general_medicine,Male,General Medicine,Available
+PAT-a2ac2b3b,46,2025-09-23,2025-09-30,ICU,Female,Gynecology,Available
+PAT-64a781e0,22,2025-03-27,2025-04-06,surgery,Male,Gynecology,Available
+PAT-54bd8932,13,2025-04-27,2025-05-04,general_medicine,Female,General Medicine,Available
+PAT-1e630d47,47,2025-11-11,2025-11-18,ICU,Female,Cardiology,Available
+PAT-d1c95e77,81,2025-04-13,2025-04-14,general_medicine,Male,Orthopedics,Available
+PAT-69802c02,30,2025-04-18,2025-04-30,ICU,Male,Pediatrics,Available
+PAT-8b68dd5f,2,2025-06-20,2025-06-28,emergency,Male,Neurology,Occupied
+PAT-93f48cc9,54,2025-12-30,2026-01-06,general_medicine,Male,Neurology,Occupied
+PAT-0477a000,3,2025-07-29,2025-07-30,emergency,Female,Pediatrics,Available
+PAT-efd9dfb4,41,2025-11-07,2025-11-10,ICU,Male,Orthopedics,Occupied
+PAT-1dd2fee7,29,2025-09-04,2025-09-17,general_medicine,Female,General Medicine,Occupied
+PAT-f316dd98,17,2025-04-06,2025-04-09,ICU,Male,Cardiology,Occupied
+PAT-d6e424a7,45,2025-01-29,2025-02-12,ICU,Female,Pediatrics,Occupied
+PAT-9da5da0c,61,2025-08-24,2025-09-02,emergency,Male,Gynecology,Available
+PAT-d6009d2d,55,2025-08-27,2025-09-05,ICU,Male,Neurology,Occupied
+PAT-93eef480,29,2025-12-25,2025-12-29,emergency,Male,Pediatrics,Available
+PAT-71af91b2,64,2025-06-26,2025-06-29,surgery,Female,Orthopedics,Occupied
+PAT-46bf225d,29,2025-11-20,2025-11-22,surgery,Male,General Medicine,Occupied
+PAT-cdf17ff3,24,2025-07-12,2025-07-17,ICU,Female,Gynecology,Occupied
+PAT-37cfaa9e,72,2025-11-01,2025-11-10,general_medicine,Male,Pediatrics,Available
+PAT-8d08fe4b,67,2025-07-06,2025-07-16,ICU,Female,Cardiology,Occupied
+PAT-5ceebd3e,60,2025-07-17,2025-07-24,emergency,Male,Neurology,Available
+PAT-781642da,10,2025-11-29,2025-12-01,surgery,Female,General Medicine,Occupied
+PAT-59b0893a,70,2025-09-17,2025-09-28,ICU,Female,Pediatrics,Available
+PAT-6527c233,19,2025-03-04,2025-03-10,emergency,Male,Gynecology,Occupied
+PAT-78c826d3,56,2025-08-29,2025-09-08,surgery,Male,Pediatrics,Available
+PAT-69b43c9f,5,2025-09-18,2025-09-24,emergency,Male,Neurology,Available
+PAT-5d40ae5a,48,2025-04-09,2025-04-13,emergency,Male,Pediatrics,Occupied
+PAT-bc9492e1,49,2025-03-03,2025-03-04,surgery,Male,Pediatrics,Available
+PAT-1cc7c1b5,2,2025-08-15,2025-08-21,ICU,Female,General Medicine,Occupied
+PAT-67f7e3c0,88,2025-03-09,2025-03-23,emergency,Male,Orthopedics,Occupied
+PAT-ff95fbd3,10,2025-11-19,2025-11-30,emergency,Male,Neurology,Occupied
+PAT-64d84602,28,2025-07-14,2025-07-23,emergency,Male,Neurology,Occupied
+PAT-aec27b91,75,2025-01-09,2025-01-17,surgery,Female,Pediatrics,Occupied
+PAT-adbace23,4,2025-08-14,2025-08-22,general_medicine,Female,Orthopedics,Occupied
+PAT-4541f775,37,2025-09-08,2025-09-13,ICU,Male,Neurology,Occupied
+PAT-747aa801,17,2025-02-06,2025-02-18,surgery,Male,Gynecology,Occupied
+PAT-8f6d5fa4,27,2025-03-22,2025-03-24,emergency,Female,Neurology,Occupied
+PAT-5549773a,44,2025-11-14,2025-11-27,ICU,Female,Orthopedics,Occupied
+PAT-a1a7ae2d,55,2025-12-20,2025-12-28,ICU,Male,Cardiology,Occupied
+PAT-e3ea41ad,76,2025-10-16,2025-10-22,emergency,Female,General Medicine,Available
+PAT-9503b40f,18,2025-06-17,2025-06-29,ICU,Female,Orthopedics,Available
+PAT-77cb8744,58,2025-10-31,2025-11-09,general_medicine,Male,Neurology,Occupied
+PAT-7b4c9205,44,2025-06-30,2025-07-10,emergency,Male,Pediatrics,Occupied
+PAT-140b8ad9,62,2025-07-07,2025-07-14,general_medicine,Male,Neurology,Occupied
+PAT-d2e54d43,44,2025-09-06,2025-09-09,surgery,Female,General Medicine,Occupied
+PAT-7d1cd17c,22,2025-06-09,2025-06-20,surgery,Male,Orthopedics,Occupied
+PAT-a5027bf8,38,2025-03-23,2025-03-27,general_medicine,Male,Neurology,Occupied
+PAT-e084c2a6,77,2025-01-12,2025-01-19,emergency,Female,Orthopedics,Occupied
+PAT-6df0ffc7,12,2025-06-04,2025-06-05,surgery,Female,Pediatrics,Occupied
+PAT-778a1d7f,59,2025-12-10,2025-12-23,ICU,Female,Cardiology,Available
+PAT-c10bb8e8,69,2025-03-15,2025-03-24,general_medicine,Female,Cardiology,Occupied
+PAT-213fad7f,62,2025-03-01,2025-03-15,ICU,Male,Pediatrics,Available
+PAT-ac6dc0e1,21,2025-12-18,2025-12-22,ICU,Male,Pediatrics,Occupied
+PAT-76736cf9,63,2025-01-12,2025-01-18,emergency,Female,General Medicine,Occupied
+PAT-7447f98d,9,2025-07-12,2025-07-18,surgery,Female,Gynecology,Available
+PAT-adc6b53e,81,2025-09-27,2025-10-10,surgery,Male,Gynecology,Occupied
+PAT-566609d4,35,2025-08-15,2025-08-19,general_medicine,Male,Neurology,Available
+PAT-76ad3db1,6,2025-02-02,2025-02-08,emergency,Male,Cardiology,Occupied
+PAT-6cade292,31,2025-02-27,2025-03-06,general_medicine,Female,General Medicine,Occupied
+PAT-9058ed41,45,2025-10-12,2025-10-16,surgery,Male,Gynecology,Available
+PAT-a672d6ab,12,2025-02-08,2025-02-15,emergency,Female,Orthopedics,Occupied
+PAT-55170e9d,28,2025-10-15,2025-10-17,general_medicine,Female,Neurology,Available
+PAT-1c369f8c,83,2025-01-27,2025-01-30,surgery,Male,Cardiology,Occupied
+PAT-933fdb73,55,2025-01-21,2025-01-26,ICU,Female,Cardiology,Available
+PAT-36e02234,5,2025-09-14,2025-09-24,general_medicine,Female,General Medicine,Available
+PAT-5cc44627,14,2025-06-12,2025-06-13,surgery,Female,Cardiology,Occupied
+PAT-333f8368,23,2025-10-01,2025-10-13,ICU,Male,Orthopedics,Occupied
+PAT-82531806,26,2025-03-01,2025-03-15,ICU,Female,Gynecology,Available
+PAT-16a8108f,16,2025-11-05,2025-11-13,emergency,Male,Orthopedics,Occupied
+PAT-d977b532,26,2025-02-19,2025-02-23,surgery,Female,Pediatrics,Occupied
+PAT-532a2fa4,2,2025-06-30,2025-07-08,emergency,Female,General Medicine,Occupied
+PAT-4d4b8877,19,2025-01-15,2025-01-24,surgery,Male,Neurology,Available
+PAT-2d44492a,77,2025-09-30,2025-10-14,general_medicine,Male,Neurology,Available
+PAT-dea8a3ab,8,2025-11-15,2025-11-21,surgery,Female,Cardiology,Available
+PAT-a8c3a396,87,2025-03-05,2025-03-18,ICU,Male,General Medicine,Available
+PAT-e52ee9c7,71,2025-10-01,2025-10-15,emergency,Female,Gynecology,Available
+PAT-b3234b48,37,2025-01-11,2025-01-24,ICU,Female,General Medicine,Available
+PAT-3333db57,32,2025-04-12,2025-04-21,ICU,Male,Gynecology,Available
+PAT-422fc492,10,2025-06-28,2025-07-06,surgery,Female,Neurology,Available
+PAT-62ac02ae,75,2025-02-15,2025-02-21,emergency,Male,Neurology,Available
+PAT-aecf2749,19,2025-07-21,2025-07-29,emergency,Male,General Medicine,Occupied
+PAT-910d00c5,1,2025-10-16,2025-10-25,emergency,Female,Orthopedics,Available
+PAT-1153d980,29,2025-03-18,2025-03-22,emergency,Male,Pediatrics,Occupied
+PAT-86e1492d,21,2025-07-13,2025-07-19,general_medicine,Female,Orthopedics,Occupied
+PAT-796351fa,89,2025-05-02,2025-05-04,surgery,Female,Neurology,Occupied
+PAT-45fbe971,43,2025-12-26,2026-01-06,emergency,Male,Gynecology,Available
+PAT-d70a9eaa,5,2025-09-19,2025-09-28,emergency,Female,General Medicine,Available
+PAT-807a2946,31,2025-07-23,2025-07-31,emergency,Male,General Medicine,Available
+PAT-8f4befb1,49,2025-11-14,2025-11-18,ICU,Male,Orthopedics,Available
+PAT-128d605f,74,2025-07-27,2025-07-31,ICU,Female,Gynecology,Occupied
+PAT-957409c3,57,2025-01-03,2025-01-12,surgery,Male,Pediatrics,Available
+PAT-e84b2bde,74,2025-01-12,2025-01-19,surgery,Female,Orthopedics,Available
+PAT-ef5fba5e,12,2025-10-28,2025-10-31,emergency,Female,Gynecology,Available
+PAT-9fa2fb78,54,2025-12-22,2026-01-04,surgery,Female,General Medicine,Available
+PAT-0b36c5db,52,2025-10-15,2025-10-18,general_medicine,Male,Cardiology,Available
+PAT-feaf8fa9,69,2025-07-30,2025-08-05,surgery,Male,Orthopedics,Occupied
+PAT-a0249545,55,2025-02-28,2025-03-03,emergency,Female,General Medicine,Available
+PAT-b3884d9d,73,2025-02-04,2025-02-17,general_medicine,Female,Cardiology,Occupied
+PAT-37a4e49b,53,2025-07-26,2025-07-27,general_medicine,Female,General Medicine,Available
+PAT-3f3b87d0,75,2025-12-16,2025-12-21,emergency,Female,General Medicine,Occupied
+PAT-4a65d104,57,2025-01-24,2025-01-28,emergency,Male,Cardiology,Available
+PAT-f71341e8,3,2025-12-30,2026-01-13,ICU,Female,Gynecology,Available
+PAT-7fd45a04,59,2025-02-19,2025-02-20,ICU,Male,General Medicine,Occupied
+PAT-497f24f8,35,2025-04-27,2025-04-29,surgery,Female,Orthopedics,Occupied
+PAT-397b021a,65,2025-09-19,2025-09-26,general_medicine,Male,Orthopedics,Occupied
+PAT-278b39f9,2,2025-01-18,2025-01-26,emergency,Male,Pediatrics,Available
+PAT-7d5f5886,14,2025-12-21,2025-12-31,emergency,Male,Orthopedics,Occupied
+PAT-30e54d48,86,2025-01-14,2025-01-28,surgery,Male,Cardiology,Available
+PAT-121063b2,36,2025-02-10,2025-02-24,emergency,Male,Neurology,Available
+PAT-dd595a4b,88,2025-05-10,2025-05-17,ICU,Female,General Medicine,Occupied
+PAT-238a6975,16,2025-12-11,2025-12-20,general_medicine,Male,Neurology,Occupied
+PAT-f6746853,65,2025-08-17,2025-08-22,general_medicine,Male,Cardiology,Available
+PAT-e83fd232,39,2025-06-13,2025-06-26,ICU,Male,General Medicine,Available
+PAT-4d0caa3d,46,2025-01-10,2025-01-13,general_medicine,Female,Orthopedics,Occupied
+PAT-7e7ca2a8,79,2025-04-03,2025-04-13,surgery,Male,General Medicine,Occupied
+PAT-aa7fce81,0,2025-10-03,2025-10-11,emergency,Male,General Medicine,Occupied
+PAT-8f12a5d6,0,2025-03-05,2025-03-11,emergency,Female,Pediatrics,Available
+PAT-3791a5a1,27,2025-04-17,2025-04-22,emergency,Female,Cardiology,Available
+PAT-bc0e1eca,75,2025-11-01,2025-11-02,emergency,Female,Orthopedics,Available
+PAT-481d6c67,78,2025-04-18,2025-04-29,surgery,Female,Cardiology,Available
+PAT-0d3bf577,77,2025-10-20,2025-10-24,surgery,Female,Cardiology,Available
+PAT-50b16635,28,2025-04-29,2025-05-02,emergency,Female,Orthopedics,Available
+PAT-d7ca9f9c,58,2025-06-10,2025-06-11,emergency,Female,Pediatrics,Occupied
+PAT-6239f3b2,11,2025-10-03,2025-10-08,surgery,Male,Orthopedics,Available
+PAT-aae196c0,42,2025-08-05,2025-08-07,surgery,Male,Cardiology,Available
+PAT-c84e4d43,56,2025-08-11,2025-08-19,general_medicine,Male,General Medicine,Available
+PAT-59cde384,43,2025-12-06,2025-12-13,surgery,Female,Cardiology,Occupied
+PAT-c3d1e20b,49,2025-01-08,2025-01-10,surgery,Male,Neurology,Available
+PAT-55244264,0,2025-09-21,2025-10-04,general_medicine,Male,Neurology,Available
+PAT-00b64d32,4,2025-03-27,2025-03-29,general_medicine,Female,General Medicine,Occupied
+PAT-78f9a717,54,2025-08-06,2025-08-17,general_medicine,Male,Orthopedics,Available
+PAT-98dd495d,29,2025-05-25,2025-06-04,surgery,Female,Gynecology,Available
+PAT-f8043a94,46,2025-03-17,2025-03-28,ICU,Female,Orthopedics,Available
+PAT-3e4685e0,88,2025-10-16,2025-10-17,surgery,Female,Cardiology,Available
+PAT-d29552a2,30,2025-05-22,2025-05-27,ICU,Female,Pediatrics,Available
+PAT-112d537f,89,2025-08-08,2025-08-10,surgery,Female,Cardiology,Occupied
+PAT-887e7cea,62,2025-06-10,2025-06-19,emergency,Female,Pediatrics,Occupied
+PAT-30c0449b,47,2025-03-14,2025-03-19,emergency,Female,Cardiology,Occupied
+PAT-71583d93,30,2025-11-20,2025-11-22,emergency,Male,Orthopedics,Available
+PAT-2143a928,3,2025-01-19,2025-01-25,surgery,Female,Pediatrics,Available
+PAT-8c70732d,81,2025-10-06,2025-10-09,emergency,Female,Pediatrics,Available
+PAT-00883d3c,0,2025-11-06,2025-11-13,ICU,Male,General Medicine,Occupied
+PAT-fddf786e,84,2025-03-06,2025-03-18,general_medicine,Male,Orthopedics,Available
+PAT-4ef184da,14,2025-11-12,2025-11-25,emergency,Male,Cardiology,Available
+PAT-a9c4531b,32,2025-08-12,2025-08-13,emergency,Male,Gynecology,Occupied
+PAT-25a0eac5,43,2025-09-24,2025-09-27,surgery,Male,Neurology,Available
+PAT-d4d94c8f,77,2025-09-22,2025-09-25,surgery,Male,Orthopedics,Occupied
+PAT-906c556b,25,2025-10-31,2025-11-02,ICU,Male,Pediatrics,Occupied
+PAT-4ce7266d,27,2025-08-09,2025-08-19,emergency,Female,Gynecology,Occupied
+PAT-c4848253,11,2025-10-31,2025-11-05,emergency,Female,Neurology,Available
+PAT-adca7b82,43,2025-09-28,2025-10-09,ICU,Male,Neurology,Available
+PAT-d85f1bec,69,2025-12-30,2026-01-10,surgery,Male,Orthopedics,Available
+PAT-84b93457,22,2025-12-02,2025-12-07,general_medicine,Female,Pediatrics,Available
+PAT-74615cd8,24,2025-07-22,2025-07-25,ICU,Female,Cardiology,Available
+PAT-67d4bb5c,67,2025-05-21,2025-05-27,emergency,Male,Orthopedics,Available
+PAT-e2357dd9,33,2025-02-21,2025-03-07,surgery,Male,Gynecology,Available
+PAT-7ac9ef77,28,2025-06-05,2025-06-08,general_medicine,Male,Gynecology,Occupied
+PAT-d0adb997,15,2025-06-07,2025-06-09,surgery,Male,General Medicine,Available
+PAT-096760c2,48,2025-05-12,2025-05-22,emergency,Male,General Medicine,Occupied
+PAT-36f95aa3,74,2025-12-17,2025-12-29,general_medicine,Female,General Medicine,Available
+PAT-2374bf63,38,2025-06-08,2025-06-15,emergency,Female,Neurology,Available
+PAT-89105c60,83,2025-09-20,2025-09-26,ICU,Male,Neurology,Available
+PAT-c0e08cc7,43,2025-06-22,2025-07-02,ICU,Male,Orthopedics,Occupied
+PAT-a1996f50,21,2025-10-04,2025-10-10,surgery,Female,Neurology,Occupied
+PAT-5d438213,8,2025-01-09,2025-01-19,surgery,Female,Orthopedics,Occupied
+PAT-994866af,41,2025-06-01,2025-06-02,ICU,Male,Neurology,Occupied
+PAT-51ed4886,36,2025-02-19,2025-02-27,ICU,Male,General Medicine,Available
+PAT-6fda5c2b,59,2025-07-21,2025-07-30,general_medicine,Female,Neurology,Occupied
+PAT-69035998,18,2025-08-30,2025-09-04,ICU,Male,Orthopedics,Available
+PAT-66afc4ce,32,2025-05-29,2025-05-30,general_medicine,Male,Pediatrics,Available
+PAT-de5fbcb3,47,2025-05-23,2025-05-26,emergency,Female,Gynecology,Occupied
+PAT-e1613a16,70,2025-01-11,2025-01-21,ICU,Male,Gynecology,Occupied
+PAT-55a00f9c,77,2025-09-11,2025-09-20,emergency,Female,Neurology,Occupied
+PAT-dba63b3e,63,2025-09-20,2025-09-25,general_medicine,Male,Neurology,Occupied
+PAT-2b558098,66,2025-05-05,2025-05-12,surgery,Male,Pediatrics,Occupied
+PAT-352bf97c,23,2025-10-29,2025-11-01,ICU,Female,Cardiology,Occupied
+PAT-623cbc11,89,2025-02-11,2025-02-18,surgery,Male,Cardiology,Occupied
+PAT-1c834d8e,35,2025-03-14,2025-03-22,general_medicine,Male,Cardiology,Occupied
+PAT-ab6cb480,69,2025-07-15,2025-07-28,emergency,Female,Orthopedics,Available
+PAT-3765ddaf,59,2025-01-27,2025-02-01,emergency,Female,General Medicine,Occupied
+PAT-fe52b6dc,71,2025-03-08,2025-03-14,surgery,Male,Neurology,Occupied
+PAT-46c5550c,85,2025-05-10,2025-05-17,surgery,Female,Orthopedics,Available
+PAT-859a8803,80,2025-12-20,2025-12-27,general_medicine,Male,Cardiology,Occupied
+PAT-5b8fca34,7,2025-10-27,2025-11-06,surgery,Male,Neurology,Available
+PAT-ab2071a7,68,2025-10-14,2025-10-23,emergency,Male,General Medicine,Available
+PAT-9fd54384,61,2025-05-01,2025-05-08,surgery,Female,General Medicine,Occupied
+PAT-a8134bdf,11,2025-05-16,2025-05-20,emergency,Male,Orthopedics,Available
+PAT-faeaf27e,15,2025-08-25,2025-09-01,surgery,Female,Cardiology,Available
+PAT-49865d7c,4,2025-12-26,2026-01-03,ICU,Male,General Medicine,Available
+PAT-4a3ae352,29,2025-03-25,2025-03-31,emergency,Female,Pediatrics,Available
+PAT-1dd01e3e,81,2025-08-19,2025-08-20,ICU,Female,Orthopedics,Occupied
+PAT-1a76365c,75,2025-08-14,2025-08-27,surgery,Male,Pediatrics,Available
+PAT-0812aab1,35,2025-05-31,2025-06-02,emergency,Female,Neurology,Occupied
+PAT-a7b89463,84,2025-09-06,2025-09-15,surgery,Male,Pediatrics,Available
+PAT-9152b60f,74,2025-06-29,2025-07-13,general_medicine,Female,Pediatrics,Available
+PAT-47b2e0ba,25,2025-11-07,2025-11-13,ICU,Female,Gynecology,Available
+PAT-54d1c471,21,2025-05-23,2025-05-29,general_medicine,Female,Orthopedics,Available
+PAT-15c81fbe,11,2025-02-18,2025-02-28,general_medicine,Male,Pediatrics,Occupied
+PAT-5ea4b87a,81,2025-10-18,2025-11-01,emergency,Female,Pediatrics,Occupied
+PAT-e1eedc81,29,2025-05-14,2025-05-17,surgery,Female,Neurology,Available
+PAT-c012faab,6,2025-01-14,2025-01-23,ICU,Male,Cardiology,Available
+PAT-5a624c13,20,2025-03-07,2025-03-18,general_medicine,Male,Gynecology,Occupied
+PAT-c96abf5e,34,2025-07-25,2025-07-29,surgery,Male,Gynecology,Available
+PAT-2cbbc8fb,9,2025-10-08,2025-10-21,emergency,Male,Neurology,Available
+PAT-4ded9a32,35,2025-09-27,2025-09-28,general_medicine,Female,General Medicine,Available
+PAT-86ba2b6b,53,2025-01-25,2025-02-07,surgery,Male,Pediatrics,Occupied
+PAT-6be745c6,7,2025-01-25,2025-01-29,emergency,Female,Orthopedics,Occupied
+PAT-206c834e,31,2025-04-06,2025-04-18,ICU,Female,Pediatrics,Occupied
+PAT-9f0a00b8,30,2025-01-20,2025-01-22,surgery,Male,Pediatrics,Available
+PAT-178a21af,59,2025-06-09,2025-06-22,general_medicine,Male,Gynecology,Available
+PAT-5580ba50,59,2025-10-14,2025-10-17,general_medicine,Female,Pediatrics,Occupied
+PAT-e6090bc8,82,2025-09-23,2025-10-02,surgery,Female,Orthopedics,Occupied
+PAT-bcb0f9f5,10,2025-09-10,2025-09-18,surgery,Male,Pediatrics,Occupied
+PAT-2f96488b,72,2025-03-24,2025-04-02,general_medicine,Female,Cardiology,Occupied
+PAT-0c7c720b,20,2025-06-05,2025-06-19,emergency,Female,General Medicine,Available
+PAT-30f39386,79,2025-09-09,2025-09-10,ICU,Male,Orthopedics,Occupied
+PAT-3a44c795,3,2025-02-09,2025-02-10,general_medicine,Male,Orthopedics,Available
+PAT-298a0534,51,2025-11-04,2025-11-08,emergency,Male,Orthopedics,Occupied
+PAT-1056838c,49,2025-04-26,2025-05-10,general_medicine,Male,Pediatrics,Available
+PAT-d25a486d,6,2025-04-02,2025-04-08,general_medicine,Male,Gynecology,Occupied
+PAT-02f2e75d,70,2025-03-27,2025-04-01,emergency,Female,Neurology,Occupied
+PAT-5dfa0de8,61,2025-09-03,2025-09-09,general_medicine,Male,Cardiology,Occupied
+PAT-cdb97e8c,20,2025-11-10,2025-11-18,surgery,Female,Cardiology,Occupied
+PAT-a45144ba,4,2025-01-13,2025-01-18,emergency,Male,General Medicine,Available
+PAT-372943af,84,2025-12-04,2025-12-09,emergency,Female,Pediatrics,Occupied
+PAT-3a12adef,35,2025-07-07,2025-07-18,emergency,Male,Gynecology,Available
+PAT-5528514b,51,2025-07-02,2025-07-07,ICU,Male,Cardiology,Available
+PAT-5d1f9ebb,67,2025-02-21,2025-03-05,surgery,Female,Cardiology,Available
+PAT-3b87b085,51,2025-02-11,2025-02-16,emergency,Female,Neurology,Available
+PAT-6bab5523,63,2025-04-30,2025-05-09,emergency,Male,Neurology,Occupied
+PAT-c13dc9cd,1,2025-02-17,2025-03-02,ICU,Female,Neurology,Available
+PAT-a2ce687a,9,2025-11-10,2025-11-22,surgery,Female,Pediatrics,Available
+PAT-e0bb6975,20,2025-07-22,2025-07-29,ICU,Male,Gynecology,Available
+PAT-65cf6612,7,2025-08-02,2025-08-10,general_medicine,Male,Pediatrics,Occupied
+PAT-73fe93af,16,2025-12-09,2025-12-17,ICU,Male,General Medicine,Occupied
+PAT-e746a0b3,68,2025-03-28,2025-04-02,ICU,Male,Cardiology,Occupied
+PAT-d9481512,76,2025-03-28,2025-04-08,ICU,Male,Cardiology,Occupied
+PAT-d01585f7,50,2025-06-01,2025-06-02,ICU,Female,Gynecology,Available
+PAT-c350b838,19,2025-08-20,2025-08-30,emergency,Male,Cardiology,Available
+PAT-3de02e5b,10,2025-07-30,2025-08-06,ICU,Male,Cardiology,Occupied
+PAT-032160f4,50,2025-09-18,2025-09-23,general_medicine,Male,General Medicine,Available
+PAT-c5ea2d51,7,2025-05-18,2025-05-24,ICU,Male,Orthopedics,Available
+PAT-dccd21be,80,2025-05-16,2025-05-24,general_medicine,Male,Gynecology,Available
+PAT-1f61e183,72,2025-02-18,2025-02-22,surgery,Male,General Medicine,Occupied
+PAT-57b9eff8,77,2025-06-18,2025-06-27,emergency,Male,General Medicine,Occupied
+PAT-e8f195d7,20,2025-05-20,2025-05-31,ICU,Female,General Medicine,Available
+PAT-38efddd3,1,2025-09-26,2025-10-01,surgery,Female,Gynecology,Occupied
+PAT-bcef354b,15,2025-10-15,2025-10-27,ICU,Male,Gynecology,Occupied
+PAT-26a57bc7,10,2025-09-28,2025-09-29,surgery,Male,General Medicine,Occupied
+PAT-2fcf5f77,17,2025-06-02,2025-06-10,general_medicine,Male,Pediatrics,Occupied
+PAT-044a304c,88,2025-10-05,2025-10-09,surgery,Male,Pediatrics,Occupied
+PAT-5167d4ee,83,2025-06-21,2025-06-24,emergency,Male,General Medicine,Available
+PAT-884e92a2,31,2025-04-29,2025-05-06,surgery,Male,Gynecology,Occupied
+PAT-3d7ef7b5,46,2025-05-29,2025-06-11,surgery,Female,General Medicine,Available
+PAT-9ab3b294,7,2025-12-26,2026-01-09,surgery,Female,Neurology,Available
+PAT-8496b80e,22,2025-08-12,2025-08-23,ICU,Male,Neurology,Occupied
+PAT-d57b80b0,21,2025-12-11,2025-12-17,general_medicine,Male,Neurology,Available
+PAT-c811ab2c,28,2025-09-15,2025-09-28,emergency,Female,General Medicine,Available
+PAT-6a58c511,78,2025-10-10,2025-10-12,ICU,Male,General Medicine,Available
+PAT-7c20975d,78,2025-03-29,2025-04-10,general_medicine,Female,Gynecology,Occupied
+PAT-553b6a48,21,2025-07-08,2025-07-09,general_medicine,Female,General Medicine,Occupied
+PAT-d571c058,62,2025-01-19,2025-01-26,surgery,Male,Orthopedics,Available
+PAT-15b8abcc,29,2025-04-18,2025-04-27,general_medicine,Male,General Medicine,Occupied
+PAT-41e896d3,7,2025-07-05,2025-07-13,surgery,Male,Pediatrics,Occupied
+PAT-d61a871a,4,2025-04-14,2025-04-17,general_medicine,Male,Neurology,Occupied
+PAT-50579e1d,63,2025-12-20,2025-12-31,surgery,Female,Pediatrics,Occupied
+PAT-e25fc9bd,9,2025-10-29,2025-11-05,emergency,Male,Gynecology,Available
+PAT-e5f5c1fb,26,2025-04-22,2025-05-05,surgery,Female,Pediatrics,Available
+PAT-8156704f,35,2025-08-22,2025-09-01,surgery,Female,Pediatrics,Occupied
+PAT-a674e677,80,2025-01-14,2025-01-23,surgery,Female,Gynecology,Occupied
+PAT-ad20c734,52,2025-01-20,2025-01-31,emergency,Male,Pediatrics,Available
+PAT-0b69b6d1,69,2025-07-30,2025-08-04,ICU,Female,General Medicine,Available
+PAT-edbad772,3,2025-01-24,2025-01-30,ICU,Male,General Medicine,Occupied
+PAT-c3e8e421,25,2025-08-18,2025-08-23,emergency,Male,Orthopedics,Available
+PAT-2a539c56,20,2025-02-07,2025-02-21,surgery,Male,Cardiology,Occupied
+PAT-98895bae,59,2025-01-20,2025-01-21,emergency,Female,Neurology,Occupied
+PAT-93759aa2,3,2025-01-14,2025-01-17,emergency,Male,Neurology,Available
+PAT-a68b1005,79,2025-02-24,2025-02-28,surgery,Female,Orthopedics,Available
+PAT-1d30e8d3,23,2025-06-07,2025-06-09,surgery,Female,Pediatrics,Occupied
+PAT-95dfd43c,30,2025-03-01,2025-03-04,ICU,Male,Cardiology,Occupied
+PAT-4b5c839b,21,2025-04-19,2025-05-01,ICU,Female,Orthopedics,Available
+PAT-3cbb46ef,57,2025-04-27,2025-05-01,surgery,Male,Cardiology,Occupied
+PAT-d8b5f75c,47,2025-08-16,2025-08-30,emergency,Male,General Medicine,Available
+PAT-60230dfe,17,2025-04-26,2025-04-27,general_medicine,Male,Orthopedics,Occupied
+PAT-9507d0ed,46,2025-11-09,2025-11-21,general_medicine,Male,Orthopedics,Available
+PAT-cd7b26f4,16,2025-09-17,2025-09-21,surgery,Female,Gynecology,Available
+PAT-fab8ee29,14,2025-02-16,2025-03-02,surgery,Male,Cardiology,Available
+PAT-2c69345d,8,2025-11-21,2025-11-30,surgery,Female,Neurology,Occupied
+PAT-8374cba5,49,2025-04-17,2025-04-18,general_medicine,Female,Cardiology,Occupied
+PAT-8ef38395,69,2025-12-31,2026-01-03,emergency,Male,Pediatrics,Available
+PAT-f92c667a,41,2025-10-29,2025-11-08,general_medicine,Female,Gynecology,Occupied
+PAT-bda786d0,63,2025-02-18,2025-02-23,emergency,Female,General Medicine,Available
+PAT-6cd5f87c,63,2025-12-22,2025-12-28,emergency,Male,Pediatrics,Available
+PAT-c2c67af5,3,2025-08-19,2025-08-26,surgery,Female,Cardiology,Occupied
+PAT-ac3dafd9,0,2025-11-09,2025-11-13,ICU,Female,Pediatrics,Occupied
+PAT-5e980326,40,2025-06-23,2025-07-05,surgery,Male,Neurology,Available
+PAT-fcb4a649,83,2025-02-05,2025-02-10,ICU,Female,Cardiology,Occupied
+PAT-2343cf78,23,2025-04-16,2025-04-30,ICU,Female,Cardiology,Occupied
+PAT-4307e4fa,6,2025-08-08,2025-08-22,general_medicine,Male,Pediatrics,Available
+PAT-82545b1e,79,2025-07-01,2025-07-11,ICU,Male,Orthopedics,Available
+PAT-5ce1547c,76,2025-02-13,2025-02-22,surgery,Male,Gynecology,Occupied
+PAT-5d1ff7a3,55,2025-03-25,2025-03-27,general_medicine,Female,Cardiology,Available
+PAT-5c8d5855,67,2025-01-07,2025-01-13,surgery,Male,Cardiology,Available
+PAT-b2d6b78a,81,2025-09-05,2025-09-16,ICU,Female,Gynecology,Occupied
+PAT-e893850a,87,2025-07-18,2025-07-23,general_medicine,Female,General Medicine,Available
+PAT-bc7c6516,13,2025-06-14,2025-06-24,emergency,Male,Gynecology,Available
+PAT-1f221580,81,2025-05-11,2025-05-18,emergency,Male,Cardiology,Occupied
+PAT-5bf36729,36,2025-11-01,2025-11-04,ICU,Male,Gynecology,Occupied
+PAT-5809aea6,84,2025-06-10,2025-06-12,ICU,Female,General Medicine,Available
+PAT-2dce1645,70,2025-10-16,2025-10-17,surgery,Female,Pediatrics,Available
+PAT-f801ed9b,60,2025-12-20,2026-01-01,emergency,Male,Pediatrics,Occupied
+PAT-0faa8c27,85,2025-01-17,2025-01-19,emergency,Female,Cardiology,Occupied
+PAT-8b51e748,69,2025-03-06,2025-03-16,surgery,Male,General Medicine,Occupied
+PAT-8bebbeb2,4,2025-01-22,2025-01-31,surgery,Female,Pediatrics,Occupied
+PAT-ec245e75,73,2025-05-24,2025-05-27,surgery,Male,Orthopedics,Available
+PAT-254314e1,85,2025-12-10,2025-12-18,ICU,Male,Cardiology,Occupied
+PAT-15367ce5,59,2025-05-18,2025-05-21,general_medicine,Female,Pediatrics,Occupied
+PAT-e9159794,6,2025-01-20,2025-01-30,emergency,Male,Pediatrics,Available
+PAT-c8b28e19,85,2025-08-20,2025-08-25,general_medicine,Male,Cardiology,Occupied
+PAT-367ddbef,85,2025-04-02,2025-04-16,ICU,Male,Orthopedics,Available
+PAT-c0a33763,39,2025-10-11,2025-10-21,surgery,Male,Neurology,Occupied
+PAT-f894e827,24,2025-09-11,2025-09-14,ICU,Female,General Medicine,Occupied
+PAT-88e17ded,43,2025-02-11,2025-02-15,emergency,Female,Cardiology,Occupied
+PAT-795870c2,5,2025-10-06,2025-10-15,general_medicine,Female,Pediatrics,Available
+PAT-18fbae80,68,2025-09-24,2025-10-02,general_medicine,Male,Gynecology,Available
+PAT-f344d86a,73,2025-10-24,2025-10-28,ICU,Male,Gynecology,Occupied
+PAT-4d08cb63,84,2025-02-24,2025-03-05,ICU,Male,Neurology,Available
+PAT-12b5c5f7,47,2025-04-14,2025-04-16,surgery,Female,Cardiology,Available
+PAT-afbd6440,69,2025-09-20,2025-09-23,ICU,Male,Cardiology,Available
+PAT-45c8f5a0,26,2025-12-29,2026-01-06,surgery,Male,Pediatrics,Available
+PAT-0f73df9c,32,2025-05-09,2025-05-16,ICU,Male,Cardiology,Available
+PAT-46d4e74c,31,2025-06-25,2025-07-06,ICU,Female,Orthopedics,Available
+PAT-4155dae7,3,2025-09-03,2025-09-06,surgery,Male,Gynecology,Occupied
+PAT-345029ce,8,2025-10-29,2025-11-05,ICU,Female,Cardiology,Occupied
+PAT-2eab6131,0,2025-04-19,2025-04-26,general_medicine,Female,Cardiology,Available
+PAT-0977392c,29,2025-06-11,2025-06-15,emergency,Male,Cardiology,Occupied
+PAT-3525a2c3,58,2025-05-08,2025-05-19,general_medicine,Male,Cardiology,Occupied
+PAT-2a3a6029,24,2025-12-19,2025-12-23,general_medicine,Male,Gynecology,Occupied
+PAT-3bafaea3,19,2025-06-03,2025-06-17,surgery,Male,Cardiology,Occupied
+PAT-a0e7b02a,60,2025-09-22,2025-09-26,ICU,Male,Gynecology,Available
+PAT-0f5b9763,49,2025-07-30,2025-08-11,surgery,Male,Gynecology,Occupied
+PAT-f8324089,65,2025-12-30,2026-01-11,general_medicine,Male,Orthopedics,Occupied
+PAT-d4fc50d8,84,2025-08-14,2025-08-20,ICU,Male,Cardiology,Available
+PAT-67380558,75,2025-10-13,2025-10-23,ICU,Female,Cardiology,Available
+PAT-7aeac4f3,27,2025-08-06,2025-08-20,ICU,Male,Neurology,Occupied
+PAT-ba250943,84,2025-06-29,2025-07-01,general_medicine,Male,Orthopedics,Occupied
+PAT-27c077ef,57,2025-10-06,2025-10-12,general_medicine,Female,Neurology,Occupied
+PAT-d6ffd992,68,2025-05-19,2025-06-02,ICU,Male,Cardiology,Occupied
+PAT-76ff44cb,34,2025-07-31,2025-08-13,emergency,Male,Neurology,Occupied
+PAT-3b95ce51,33,2025-09-05,2025-09-17,surgery,Male,Neurology,Occupied
+PAT-686bfae7,69,2025-05-28,2025-06-09,emergency,Male,Gynecology,Available
+PAT-b918d4e2,71,2025-12-09,2025-12-12,general_medicine,Male,Neurology,Occupied
+PAT-77822025,57,2025-10-30,2025-11-05,emergency,Male,Neurology,Occupied
+PAT-7fad2aee,62,2025-08-15,2025-08-24,emergency,Male,Cardiology,Available
+PAT-3379da7e,75,2025-02-08,2025-02-17,emergency,Male,Gynecology,Available
+PAT-21e42b2b,76,2025-07-29,2025-08-01,general_medicine,Female,General Medicine,Available
+PAT-a7f7e606,5,2025-08-07,2025-08-14,general_medicine,Female,Cardiology,Available
+PAT-6a9f0d15,45,2025-05-22,2025-05-26,surgery,Female,Pediatrics,Occupied
+PAT-ffc1144e,61,2025-05-27,2025-06-10,general_medicine,Male,Pediatrics,Occupied
+PAT-6813152c,83,2025-10-08,2025-10-16,emergency,Female,Neurology,Occupied
+PAT-10f41869,13,2025-04-12,2025-04-19,surgery,Female,Gynecology,Occupied
+PAT-67adae39,47,2025-03-24,2025-04-07,emergency,Female,General Medicine,Occupied
+PAT-5b68244f,41,2025-07-20,2025-08-01,general_medicine,Male,General Medicine,Occupied
+PAT-b4290793,44,2025-07-25,2025-08-03,general_medicine,Male,General Medicine,Available
+PAT-411f8861,46,2025-04-30,2025-05-06,ICU,Male,Pediatrics,Occupied
+PAT-1321d568,39,2025-10-13,2025-10-22,emergency,Male,General Medicine,Available
+PAT-74867ab0,51,2025-05-22,2025-06-02,emergency,Male,Gynecology,Available
+PAT-ca39f1e1,58,2025-08-10,2025-08-19,surgery,Female,Pediatrics,Occupied
+PAT-32c5535c,67,2025-09-21,2025-09-23,ICU,Female,General Medicine,Available
+PAT-4583c07a,40,2025-05-07,2025-05-14,ICU,Female,Orthopedics,Occupied
+PAT-1aacdb2d,61,2025-06-07,2025-06-19,emergency,Male,Gynecology,Available
+PAT-5ba32100,10,2025-02-19,2025-02-24,ICU,Female,Gynecology,Occupied
+PAT-fd037d8f,68,2025-10-03,2025-10-08,ICU,Female,General Medicine,Available
+PAT-ce70039d,43,2025-07-20,2025-08-02,emergency,Female,Gynecology,Occupied
+PAT-15a26fca,67,2025-08-04,2025-08-05,general_medicine,Female,Neurology,Occupied
+PAT-44becca8,44,2025-11-28,2025-12-04,general_medicine,Female,Orthopedics,Occupied
+PAT-58e12445,45,2025-01-15,2025-01-24,general_medicine,Male,Pediatrics,Occupied
+PAT-c1f5c251,25,2025-04-03,2025-04-09,ICU,Female,Pediatrics,Occupied
+PAT-22e514d2,20,2025-02-07,2025-02-11,general_medicine,Male,General Medicine,Available
+PAT-96af7c34,50,2025-11-07,2025-11-14,ICU,Male,Pediatrics,Available
+PAT-41d1a181,27,2025-03-17,2025-03-30,ICU,Female,Neurology,Available
+PAT-301d1f28,85,2025-07-13,2025-07-21,ICU,Female,General Medicine,Occupied
+PAT-092d752e,54,2025-09-14,2025-09-22,emergency,Male,Orthopedics,Available
+PAT-f93d4260,37,2025-08-02,2025-08-11,surgery,Female,General Medicine,Occupied
+PAT-1d55b217,16,2025-09-25,2025-10-01,emergency,Male,Gynecology,Occupied
+PAT-9afa1171,26,2025-12-28,2025-12-29,ICU,Male,Cardiology,Available
+PAT-8d32ebab,39,2025-10-18,2025-10-31,surgery,Male,Pediatrics,Available
+PAT-14171b1d,55,2025-05-21,2025-06-03,emergency,Female,General Medicine,Occupied
+PAT-d0d89050,48,2025-07-09,2025-07-17,surgery,Female,General Medicine,Available
+PAT-92f8e4bd,89,2025-12-07,2025-12-12,general_medicine,Male,Orthopedics,Occupied
+PAT-f45dc598,87,2025-11-01,2025-11-10,emergency,Male,Neurology,Occupied
+PAT-3e5b33b6,87,2025-11-03,2025-11-14,emergency,Male,Neurology,Occupied
+PAT-cdd8d70b,54,2025-02-08,2025-02-21,emergency,Male,Cardiology,Occupied
+PAT-d5b3c5bd,18,2025-11-29,2025-12-13,general_medicine,Male,Gynecology,Occupied
+PAT-c0589f05,39,2025-01-19,2025-01-31,ICU,Male,General Medicine,Available
+PAT-ebb0fd45,71,2025-04-19,2025-05-01,emergency,Female,Cardiology,Available
+PAT-8ab0d795,44,2025-04-13,2025-04-25,surgery,Female,General Medicine,Occupied
+PAT-78c92ad4,7,2025-12-13,2025-12-27,emergency,Male,General Medicine,Occupied
+PAT-71578f0d,29,2025-08-03,2025-08-04,emergency,Male,Pediatrics,Available
+PAT-f804d47a,81,2025-11-20,2025-12-04,surgery,Female,Neurology,Available
+PAT-1112a754,35,2025-05-27,2025-06-08,surgery,Male,Orthopedics,Occupied
+PAT-e9c66e7a,83,2025-08-13,2025-08-25,emergency,Female,Pediatrics,Available
+PAT-797179a8,40,2025-09-15,2025-09-28,general_medicine,Female,Pediatrics,Occupied
+PAT-0cdbda5c,65,2025-11-27,2025-12-10,general_medicine,Female,Orthopedics,Available
+PAT-2d5f4210,13,2025-02-20,2025-02-26,surgery,Male,Pediatrics,Occupied
+PAT-a95f6d9a,38,2025-09-16,2025-09-20,ICU,Female,Neurology,Available
+PAT-8a8a2306,26,2025-01-02,2025-01-15,emergency,Male,Neurology,Occupied
+PAT-5fa02ec0,2,2025-12-16,2025-12-24,ICU,Female,Gynecology,Available
+PAT-7ea2b8a9,80,2025-09-25,2025-09-28,emergency,Male,Gynecology,Available
+PAT-af3e8f0a,54,2025-12-23,2025-12-28,emergency,Female,Cardiology,Occupied
+PAT-08cfcfe4,24,2025-10-21,2025-11-02,general_medicine,Male,Neurology,Available
+PAT-ec73ad08,53,2025-05-26,2025-05-30,general_medicine,Male,Gynecology,Occupied
+PAT-feed729e,44,2025-03-14,2025-03-19,general_medicine,Female,Orthopedics,Available
+PAT-ce009d6c,29,2025-12-30,2026-01-01,ICU,Male,General Medicine,Occupied
+PAT-644e794a,66,2025-06-05,2025-06-17,general_medicine,Female,Cardiology,Available
+PAT-c30d956f,40,2025-01-23,2025-01-31,general_medicine,Male,Orthopedics,Occupied
+PAT-d5107b3f,47,2025-11-09,2025-11-15,ICU,Male,Gynecology,Available
+PAT-3dc38162,32,2025-06-16,2025-06-18,ICU,Female,Pediatrics,Occupied
+PAT-b3d36402,36,2025-07-15,2025-07-20,general_medicine,Male,Gynecology,Available
+PAT-d4cb5f94,64,2025-05-28,2025-05-31,general_medicine,Male,Gynecology,Occupied
+PAT-98de3daa,73,2025-05-06,2025-05-17,ICU,Female,Gynecology,Occupied
+PAT-57cfea87,63,2025-06-25,2025-06-29,emergency,Female,Gynecology,Occupied
+PAT-2cd729ed,64,2025-04-23,2025-05-06,general_medicine,Female,Pediatrics,Available
+PAT-58a77385,29,2025-12-10,2025-12-21,ICU,Female,Pediatrics,Occupied
+PAT-217cc5b5,74,2025-09-17,2025-09-27,emergency,Female,Neurology,Available
+PAT-71152f09,45,2025-12-29,2026-01-09,surgery,Male,Neurology,Occupied
+PAT-66715fd4,58,2025-09-02,2025-09-16,emergency,Female,Gynecology,Available
+PAT-7a6aaa25,36,2025-05-04,2025-05-09,surgery,Female,Orthopedics,Occupied
+PAT-b9cb708e,86,2025-07-15,2025-07-17,surgery,Female,Cardiology,Available
+PAT-2ca10907,28,2025-02-28,2025-03-14,emergency,Female,Pediatrics,Available
+PAT-8ae5951e,21,2025-03-10,2025-03-15,ICU,Male,Cardiology,Occupied
+PAT-1b2195ca,33,2025-12-08,2025-12-13,emergency,Male,Cardiology,Available
+PAT-0f24de9a,50,2025-02-11,2025-02-13,general_medicine,Female,General Medicine,Available
+PAT-ed96c501,50,2025-12-07,2025-12-21,surgery,Male,Gynecology,Occupied
+PAT-bc8933d5,43,2025-12-25,2025-12-29,general_medicine,Female,Pediatrics,Available
+PAT-899829ab,62,2025-05-05,2025-05-08,ICU,Female,Gynecology,Available
+PAT-63f06a70,10,2025-09-30,2025-10-03,ICU,Female,Gynecology,Available
+PAT-1def560a,85,2025-06-01,2025-06-11,emergency,Female,General Medicine,Occupied
+PAT-3764a931,36,2025-12-07,2025-12-15,general_medicine,Male,Neurology,Available
+PAT-5228b8e2,4,2025-04-11,2025-04-15,emergency,Female,Gynecology,Occupied
+PAT-bfab57a1,63,2025-04-27,2025-04-29,general_medicine,Male,Pediatrics,Available
+PAT-40e4a08e,53,2025-02-16,2025-02-28,emergency,Male,Orthopedics,Available
+PAT-153d6e29,10,2025-01-05,2025-01-06,general_medicine,Male,Orthopedics,Available
+PAT-875ff60a,40,2025-01-12,2025-01-18,surgery,Female,Neurology,Occupied
+PAT-98218167,18,2025-10-31,2025-11-12,surgery,Female,Pediatrics,Available
+PAT-4b0d36e5,69,2025-07-02,2025-07-12,general_medicine,Male,Pediatrics,Available
+PAT-5ee95f95,74,2025-08-04,2025-08-11,emergency,Female,Gynecology,Occupied
+PAT-bb0d37fb,26,2025-07-11,2025-07-20,general_medicine,Male,Neurology,Available
+PAT-b7a3a7b5,50,2025-08-07,2025-08-09,emergency,Male,Gynecology,Occupied
+PAT-965208ae,50,2025-08-27,2025-08-31,general_medicine,Male,Gynecology,Occupied
+PAT-e21e7d5d,34,2025-11-25,2025-12-03,ICU,Female,Orthopedics,Available
+PAT-5d29efde,80,2025-08-13,2025-08-21,emergency,Female,Neurology,Occupied
+PAT-c6173e0e,62,2025-11-19,2025-11-30,surgery,Female,Neurology,Available
+PAT-27a4ae9d,12,2025-07-08,2025-07-15,general_medicine,Male,Neurology,Occupied
+PAT-cbf5ef6b,21,2025-08-02,2025-08-13,emergency,Male,Neurology,Occupied
+PAT-f2c06525,53,2025-10-25,2025-11-08,surgery,Male,Pediatrics,Available
+PAT-91fbb614,79,2025-07-13,2025-07-22,ICU,Female,Pediatrics,Occupied
+PAT-3c3b686e,34,2025-10-13,2025-10-22,ICU,Female,Neurology,Occupied
+PAT-0b7a9b1a,46,2025-01-19,2025-01-21,general_medicine,Female,Neurology,Occupied
+PAT-e0528d5b,25,2025-11-23,2025-12-07,emergency,Female,Gynecology,Occupied
+PAT-91801a46,66,2025-10-19,2025-10-28,emergency,Female,General Medicine,Occupied
+PAT-6fc0d4bc,0,2025-02-06,2025-02-19,general_medicine,Male,Pediatrics,Available
+PAT-8cc62151,7,2025-07-07,2025-07-16,emergency,Male,Pediatrics,Occupied
+PAT-6f6aab68,35,2025-07-13,2025-07-21,general_medicine,Male,Pediatrics,Available
+PAT-32bcc4bc,8,2025-09-17,2025-10-01,surgery,Female,Orthopedics,Occupied
+PAT-68f98442,74,2025-03-13,2025-03-16,general_medicine,Male,Gynecology,Available
+PAT-75899c2c,59,2025-06-22,2025-06-24,emergency,Female,Neurology,Available
+PAT-bd4c2b5a,15,2025-05-25,2025-06-01,surgery,Female,Gynecology,Occupied
+PAT-d76b4457,15,2025-07-07,2025-07-09,surgery,Female,Neurology,Occupied
+PAT-1b2fe77a,89,2025-07-03,2025-07-15,emergency,Male,Orthopedics,Occupied
+PAT-b1c0d6fc,38,2025-08-03,2025-08-17,general_medicine,Male,Gynecology,Available
+PAT-ac74c7d9,52,2025-11-17,2025-11-18,general_medicine,Male,Neurology,Occupied
+PAT-b10b358e,52,2025-01-21,2025-01-24,emergency,Male,Neurology,Available
+PAT-7d80fdf8,56,2025-08-02,2025-08-03,emergency,Female,Orthopedics,Available
+PAT-4d723c2b,31,2025-03-15,2025-03-25,surgery,Female,Gynecology,Available
+PAT-20e12483,71,2025-02-21,2025-02-25,surgery,Female,Cardiology,Occupied
+PAT-0a43159b,13,2025-02-22,2025-03-02,surgery,Female,General Medicine,Occupied
+PAT-648c8bc7,21,2025-07-10,2025-07-14,surgery,Female,Pediatrics,Available
+PAT-a1761f12,58,2025-09-21,2025-09-23,general_medicine,Male,Cardiology,Available
+PAT-4428a64a,30,2025-10-17,2025-10-19,surgery,Male,Gynecology,Occupied
+PAT-7472f19a,74,2025-07-23,2025-07-24,emergency,Female,Orthopedics,Available
+PAT-456107ba,56,2025-08-29,2025-09-08,general_medicine,Male,Pediatrics,Occupied
+PAT-55d9fc4e,25,2025-04-06,2025-04-12,surgery,Female,Gynecology,Available
+PAT-0fb05dda,80,2025-03-29,2025-03-31,general_medicine,Female,Orthopedics,Occupied
+PAT-21f7def6,40,2025-11-21,2025-12-03,surgery,Male,Gynecology,Available
+PAT-c53eaa83,27,2025-05-01,2025-05-02,general_medicine,Female,Orthopedics,Occupied
+PAT-9f30d836,8,2025-06-11,2025-06-23,general_medicine,Female,Gynecology,Available
+PAT-c36208df,81,2025-11-03,2025-11-16,general_medicine,Female,Pediatrics,Occupied
+PAT-954bb8a1,48,2025-04-22,2025-04-30,surgery,Female,General Medicine,Occupied
+PAT-e23ed8bc,50,2025-07-05,2025-07-12,emergency,Male,Pediatrics,Available
+PAT-c586fb1a,28,2025-11-12,2025-11-23,emergency,Female,General Medicine,Available
+PAT-f2a1c816,54,2025-06-24,2025-07-01,surgery,Female,General Medicine,Occupied
+PAT-4a9c8a71,20,2025-01-13,2025-01-18,general_medicine,Male,Neurology,Available
+PAT-0ced5480,23,2025-01-11,2025-01-12,ICU,Female,Orthopedics,Occupied
+PAT-31dd253c,46,2025-04-04,2025-04-13,emergency,Female,Cardiology,Available
+PAT-2b9ef954,83,2025-07-30,2025-08-11,general_medicine,Male,Orthopedics,Occupied
+PAT-27519dd1,41,2025-04-11,2025-04-17,emergency,Female,Pediatrics,Occupied
+PAT-e516fb11,27,2025-02-10,2025-02-13,ICU,Male,Neurology,Occupied
+PAT-7e498fde,77,2025-08-24,2025-09-02,general_medicine,Female,Cardiology,Occupied
+PAT-07a9ee88,12,2025-08-17,2025-08-30,surgery,Female,Cardiology,Occupied
+PAT-c671db5c,30,2025-01-16,2025-01-25,surgery,Male,Gynecology,Occupied
+PAT-1d334b29,37,2025-11-06,2025-11-14,general_medicine,Male,Orthopedics,Available
+PAT-637291af,86,2025-08-25,2025-08-27,emergency,Male,Gynecology,Available
+PAT-5ec9e0ff,87,2025-09-20,2025-09-24,ICU,Male,Gynecology,Available
+PAT-fc0fba74,2,2025-11-22,2025-12-04,ICU,Female,Pediatrics,Occupied
+PAT-7831a60c,27,2025-11-06,2025-11-12,ICU,Male,Pediatrics,Occupied
+PAT-4d8aaa7b,20,2025-08-23,2025-08-26,ICU,Male,General Medicine,Occupied
+PAT-4b2d028b,56,2025-04-28,2025-05-04,emergency,Male,Cardiology,Occupied
+PAT-673f9fe1,52,2025-10-30,2025-11-04,ICU,Female,Orthopedics,Available
+PAT-f3116f83,45,2025-06-14,2025-06-20,emergency,Female,Neurology,Available
+PAT-cc436e98,1,2025-12-03,2025-12-07,surgery,Female,General Medicine,Occupied
+PAT-9a867125,9,2025-04-21,2025-04-27,general_medicine,Female,Neurology,Available
+PAT-03f5abbe,11,2025-01-24,2025-02-06,surgery,Female,Gynecology,Available
+PAT-c3cf62f7,59,2025-08-18,2025-08-19,surgery,Male,Pediatrics,Occupied
+PAT-bd6118dc,27,2025-06-24,2025-06-25,ICU,Male,Gynecology,Available
+PAT-b552e40a,57,2025-10-10,2025-10-16,ICU,Female,Neurology,Occupied
+PAT-475c1770,33,2025-05-14,2025-05-21,emergency,Female,Gynecology,Available
+PAT-07c275e3,24,2025-02-24,2025-03-06,emergency,Male,General Medicine,Occupied
+PAT-894839fd,56,2025-01-12,2025-01-23,surgery,Male,Cardiology,Occupied
+PAT-da8312ed,76,2025-08-16,2025-08-19,general_medicine,Male,Gynecology,Occupied
+PAT-159b170a,31,2025-09-21,2025-09-22,general_medicine,Female,Gynecology,Occupied
+PAT-281c31d6,88,2025-02-14,2025-02-20,ICU,Male,Neurology,Available
+PAT-366e54bd,66,2025-06-06,2025-06-08,emergency,Male,Neurology,Occupied
+PAT-9206ac07,27,2025-03-20,2025-04-01,emergency,Female,Pediatrics,Occupied
+PAT-4afc065e,43,2025-01-04,2025-01-14,surgery,Female,Cardiology,Occupied
+PAT-233cf65d,8,2025-05-13,2025-05-21,general_medicine,Female,Neurology,Available
+PAT-e4c5c9cb,83,2025-11-27,2025-12-09,surgery,Female,Gynecology,Occupied
+PAT-6ac51a4a,16,2025-03-31,2025-04-12,general_medicine,Male,Gynecology,Available
+PAT-207eeee9,56,2025-01-25,2025-02-04,surgery,Male,General Medicine,Occupied
+PAT-bdf625cd,10,2025-06-30,2025-07-08,emergency,Male,Pediatrics,Available
+PAT-95b718f5,67,2025-12-17,2025-12-29,general_medicine,Female,Cardiology,Available
+PAT-553df120,64,2025-06-24,2025-06-28,emergency,Male,Pediatrics,Occupied
+PAT-e0426fb6,87,2025-07-07,2025-07-16,surgery,Male,Pediatrics,Available
+PAT-baaa8d0d,45,2025-10-09,2025-10-10,surgery,Female,Pediatrics,Occupied
+PAT-7be09c6f,83,2025-12-27,2026-01-07,ICU,Female,General Medicine,Occupied
+PAT-d3985fe7,49,2025-08-14,2025-08-27,surgery,Male,Pediatrics,Occupied
+PAT-09edc78a,45,2025-10-21,2025-11-04,emergency,Female,Orthopedics,Available
+PAT-897e4be6,61,2025-03-19,2025-03-29,surgery,Male,Pediatrics,Available
+PAT-d1449d33,2,2025-01-06,2025-01-19,surgery,Male,Cardiology,Occupied
+PAT-236e8970,43,2025-08-23,2025-09-04,emergency,Female,Orthopedics,Occupied
+PAT-3477ec8b,80,2025-11-27,2025-12-10,ICU,Male,Cardiology,Available
+PAT-6ac55517,27,2025-03-11,2025-03-20,ICU,Male,Orthopedics,Occupied
+PAT-a7915775,67,2025-09-09,2025-09-17,general_medicine,Male,Cardiology,Occupied
+PAT-64f49895,61,2025-11-28,2025-12-09,emergency,Male,Gynecology,Occupied
+PAT-b3a107ff,88,2025-01-19,2025-01-26,surgery,Male,Gynecology,Available
+PAT-5f71cf54,81,2025-09-17,2025-09-29,surgery,Male,Pediatrics,Available
+PAT-c2eeaec2,58,2025-12-20,2025-12-21,emergency,Female,Cardiology,Available
+PAT-5e8ef805,65,2025-09-04,2025-09-12,surgery,Male,Pediatrics,Occupied
+PAT-51be495d,7,2025-12-18,2025-12-22,surgery,Female,Orthopedics,Occupied
+PAT-76b8f034,64,2025-02-08,2025-02-09,general_medicine,Female,Neurology,Occupied
+PAT-1a4bb823,87,2025-12-08,2025-12-21,surgery,Female,Neurology,Available
+PAT-69c66880,43,2025-03-15,2025-03-19,emergency,Female,Pediatrics,Occupied
+PAT-4e3684c3,27,2025-09-12,2025-09-23,surgery,Female,Neurology,Occupied
+PAT-4dfe566b,87,2025-09-09,2025-09-17,surgery,Male,Pediatrics,Occupied
+PAT-17ceaafc,54,2025-04-01,2025-04-07,ICU,Female,General Medicine,Occupied
+PAT-633e82db,26,2025-12-15,2025-12-18,emergency,Male,Pediatrics,Available
+PAT-431e5a3d,44,2025-08-16,2025-08-25,surgery,Female,Pediatrics,Available
+PAT-0d73fc32,33,2025-05-09,2025-05-18,general_medicine,Female,Pediatrics,Occupied
+PAT-0f8876bf,70,2025-11-19,2025-11-23,emergency,Male,Orthopedics,Available
+PAT-120a3270,34,2025-04-23,2025-04-30,general_medicine,Male,Orthopedics,Available
+PAT-2d4ae2a6,89,2025-01-17,2025-01-19,surgery,Female,Neurology,Occupied
+PAT-06a8ea25,83,2025-04-01,2025-04-03,emergency,Female,Neurology,Occupied
+PAT-3f935d42,64,2025-09-14,2025-09-24,surgery,Female,Pediatrics,Available
+PAT-eaf3d995,19,2025-12-09,2025-12-19,ICU,Female,Orthopedics,Occupied
+PAT-fafd3c1f,40,2025-07-12,2025-07-13,emergency,Female,Cardiology,Available
+PAT-d8d3e8e6,40,2025-03-09,2025-03-14,emergency,Female,Orthopedics,Occupied
+PAT-33a6b3b7,55,2025-05-29,2025-06-01,general_medicine,Male,Pediatrics,Available
+PAT-3b7a6a71,25,2025-04-19,2025-05-01,general_medicine,Male,Neurology,Occupied
+PAT-3abe7e51,46,2025-11-23,2025-12-03,general_medicine,Male,General Medicine,Available
+PAT-828e43f6,4,2025-05-12,2025-05-19,emergency,Female,Pediatrics,Available
+PAT-f0b826f4,14,2025-04-26,2025-05-09,surgery,Female,Cardiology,Available
+PAT-4252f4aa,7,2025-05-27,2025-06-03,emergency,Male,Gynecology,Occupied
+PAT-f0121d06,67,2025-09-28,2025-10-01,surgery,Female,Pediatrics,Available
+PAT-a7f5edb5,0,2025-10-07,2025-10-18,general_medicine,Male,Pediatrics,Available
+PAT-a67c43c0,62,2025-06-13,2025-06-15,emergency,Male,Orthopedics,Occupied
+PAT-f7527244,23,2025-01-04,2025-01-07,ICU,Female,Neurology,Occupied
+PAT-0e5edb85,56,2025-06-30,2025-07-08,emergency,Male,Cardiology,Available
+PAT-48e68823,68,2025-09-11,2025-09-16,general_medicine,Male,Pediatrics,Available
+PAT-700dfc8e,56,2025-06-17,2025-06-24,surgery,Male,Orthopedics,Occupied
+PAT-62535599,37,2025-11-13,2025-11-17,emergency,Female,Cardiology,Occupied
+PAT-78fbf23e,50,2025-10-30,2025-11-03,surgery,Male,Pediatrics,Occupied
+PAT-c992d6dc,75,2025-08-27,2025-09-05,surgery,Male,General Medicine,Occupied
+PAT-78e6425f,12,2025-11-10,2025-11-12,general_medicine,Male,General Medicine,Occupied
+PAT-608c9812,61,2025-01-25,2025-02-05,emergency,Female,Neurology,Available
+PAT-6d0c98de,56,2025-02-16,2025-02-22,surgery,Male,Orthopedics,Occupied
+PAT-4102c22f,38,2025-01-22,2025-01-27,ICU,Female,Pediatrics,Available
+PAT-99cf78d9,71,2025-09-29,2025-10-10,emergency,Male,Neurology,Available
+PAT-f0066d28,41,2025-02-01,2025-02-12,surgery,Female,General Medicine,Available
+PAT-3e469538,8,2025-05-19,2025-05-29,emergency,Female,Pediatrics,Occupied
+PAT-ec3ac1ec,16,2025-02-17,2025-02-21,ICU,Female,General Medicine,Available
+PAT-274cecf8,20,2025-04-12,2025-04-13,emergency,Female,Gynecology,Available
+PAT-3ca8e0e7,62,2025-02-20,2025-02-24,emergency,Male,Pediatrics,Occupied
+PAT-41d3ebd2,87,2025-04-14,2025-04-21,surgery,Male,Cardiology,Available
+PAT-487252c6,0,2025-06-16,2025-06-29,general_medicine,Female,Gynecology,Available
+PAT-b00a1c8a,33,2025-06-18,2025-07-01,general_medicine,Male,Orthopedics,Occupied
+PAT-fe5fc1e8,12,2025-09-19,2025-09-23,surgery,Male,Pediatrics,Available
+PAT-20f95ce5,80,2025-02-18,2025-03-02,general_medicine,Male,Pediatrics,Available
+PAT-b32de03e,80,2025-09-28,2025-10-02,general_medicine,Female,Orthopedics,Available
+PAT-e9f8507e,67,2025-12-05,2025-12-16,surgery,Male,Pediatrics,Occupied
+PAT-476d27b6,77,2025-10-16,2025-10-30,surgery,Female,Cardiology,Occupied
+PAT-c1339d9f,60,2025-08-04,2025-08-15,general_medicine,Female,Pediatrics,Occupied
+PAT-b129e285,82,2025-06-17,2025-06-20,surgery,Female,Cardiology,Available
+PAT-d0ca3709,68,2025-12-02,2025-12-08,general_medicine,Male,Cardiology,Available
+PAT-b2e7e433,12,2025-11-16,2025-11-30,ICU,Female,General Medicine,Occupied
+PAT-b508e693,18,2025-03-21,2025-04-01,ICU,Male,Neurology,Available
+PAT-e0c6b792,88,2025-04-05,2025-04-09,ICU,Male,General Medicine,Available
+PAT-1f02565c,1,2025-01-22,2025-01-25,ICU,Male,Cardiology,Occupied
+PAT-9d0a8b4f,71,2025-07-25,2025-08-02,general_medicine,Male,Neurology,Occupied
+PAT-0bc36736,15,2025-03-24,2025-03-27,general_medicine,Male,Pediatrics,Available
+PAT-830ce447,79,2025-05-04,2025-05-05,ICU,Male,Orthopedics,Available
+PAT-22448826,52,2025-10-10,2025-10-22,general_medicine,Male,General Medicine,Available
+PAT-85f8f76d,5,2025-01-05,2025-01-14,emergency,Male,General Medicine,Occupied
+PAT-ca8b7c4f,77,2025-04-28,2025-05-06,emergency,Female,Pediatrics,Occupied
+PAT-1a39f5ef,61,2025-01-19,2025-01-25,surgery,Male,Orthopedics,Occupied
+PAT-84d9b53b,65,2025-02-16,2025-02-23,surgery,Male,Gynecology,Occupied
+PAT-2f062625,32,2025-03-25,2025-03-31,emergency,Female,Pediatrics,Available
+PAT-50e9a26e,78,2025-01-14,2025-01-21,general_medicine,Male,Orthopedics,Occupied
+PAT-c3770ed2,53,2025-09-05,2025-09-09,emergency,Male,Gynecology,Occupied
+PAT-8b4592fd,23,2025-11-15,2025-11-25,surgery,Male,Cardiology,Occupied
+PAT-65dd44b9,89,2025-06-06,2025-06-16,surgery,Male,Cardiology,Occupied
+PAT-b945140c,65,2025-02-27,2025-03-04,surgery,Female,Orthopedics,Occupied
+PAT-b0296eda,61,2025-03-23,2025-04-02,emergency,Female,Cardiology,Available
+PAT-461d939d,40,2025-08-07,2025-08-08,emergency,Male,Orthopedics,Available
+PAT-c5d69767,70,2025-09-23,2025-09-25,general_medicine,Male,Neurology,Occupied
+PAT-896954ce,34,2025-01-02,2025-01-14,ICU,Male,Pediatrics,Available
+PAT-76b1239a,73,2025-01-22,2025-02-01,surgery,Male,Orthopedics,Occupied
+PAT-9f7441a4,28,2025-08-18,2025-08-22,general_medicine,Male,Neurology,Occupied
+PAT-32b3846f,40,2025-05-28,2025-06-09,surgery,Male,Neurology,Available
+PAT-04be60be,83,2025-11-18,2025-12-02,general_medicine,Female,General Medicine,Available
+PAT-06d975bc,21,2025-05-14,2025-05-25,general_medicine,Female,General Medicine,Occupied
+PAT-edd51a1d,72,2025-12-18,2025-12-24,emergency,Female,General Medicine,Occupied
+PAT-25e652d5,58,2025-09-15,2025-09-28,ICU,Male,Neurology,Occupied
+PAT-be6b1a7e,64,2025-06-03,2025-06-12,general_medicine,Male,Cardiology,Available
+PAT-5f036208,52,2025-11-11,2025-11-17,general_medicine,Male,Neurology,Occupied
+PAT-3c5ad566,21,2025-04-08,2025-04-22,ICU,Male,Neurology,Occupied
+PAT-1cb58eb1,27,2025-10-28,2025-11-01,emergency,Female,General Medicine,Occupied
+PAT-84383577,48,2025-06-13,2025-06-16,emergency,Female,Orthopedics,Available
+PAT-3387a766,9,2025-03-14,2025-03-27,ICU,Male,General Medicine,Occupied
+PAT-534552ce,31,2025-06-25,2025-07-01,surgery,Female,Gynecology,Occupied
+PAT-bcfd658d,73,2025-10-10,2025-10-16,surgery,Female,General Medicine,Available
+PAT-b790e9a4,84,2025-09-28,2025-10-02,general_medicine,Female,Cardiology,Occupied
+PAT-b963abd9,72,2025-09-05,2025-09-17,general_medicine,Male,Gynecology,Occupied
+PAT-4da378df,42,2025-02-10,2025-02-20,emergency,Male,Cardiology,Available
+PAT-a269a666,39,2025-09-02,2025-09-09,general_medicine,Female,Cardiology,Occupied
+PAT-f1d58f18,51,2025-03-04,2025-03-05,general_medicine,Male,Orthopedics,Available
+PAT-8718ccfc,42,2025-10-17,2025-10-25,ICU,Male,Gynecology,Available
+PAT-7fde7abd,60,2025-11-14,2025-11-24,surgery,Male,General Medicine,Occupied
+PAT-fe962113,74,2025-12-04,2025-12-18,ICU,Male,Orthopedics,Occupied
+PAT-3e9880ae,81,2025-05-07,2025-05-10,surgery,Female,Neurology,Occupied
+PAT-7b81d6a8,58,2025-03-18,2025-03-26,general_medicine,Female,General Medicine,Occupied
+PAT-8d50679f,73,2025-11-17,2025-11-24,surgery,Male,Orthopedics,Available
+PAT-eb2eaf54,7,2025-07-28,2025-08-06,general_medicine,Female,Neurology,Occupied
+PAT-b96272b5,88,2025-10-11,2025-10-12,general_medicine,Male,General Medicine,Available
+PAT-24ea0371,8,2025-02-25,2025-03-08,surgery,Female,General Medicine,Occupied
+PAT-0b1acdd9,1,2025-02-27,2025-03-10,emergency,Male,Orthopedics,Occupied
+PAT-0c687528,39,2025-04-24,2025-05-06,ICU,Male,Pediatrics,Occupied
+PAT-c15e9cfe,78,2025-01-18,2025-01-20,ICU,Male,Pediatrics,Available
+PAT-b24cb337,10,2025-07-04,2025-07-17,surgery,Male,Pediatrics,Occupied
+PAT-7089b3a1,85,2025-05-15,2025-05-28,ICU,Female,Gynecology,Occupied
+PAT-2bd39b2c,67,2025-07-26,2025-07-27,ICU,Female,Orthopedics,Occupied
+PAT-f9cab28a,77,2025-08-30,2025-09-08,surgery,Male,Neurology,Occupied
+PAT-0865f855,37,2025-05-13,2025-05-14,emergency,Female,Neurology,Available
+PAT-04866ac6,20,2025-04-19,2025-04-23,surgery,Female,Gynecology,Occupied
+PAT-c7e881c9,34,2025-03-10,2025-03-11,ICU,Male,Gynecology,Available
+PAT-f4883a1d,11,2025-10-10,2025-10-18,ICU,Male,Orthopedics,Available
+PAT-55f61bb9,24,2025-03-02,2025-03-12,emergency,Male,Cardiology,Available
+PAT-268d03da,24,2025-11-07,2025-11-21,emergency,Male,General Medicine,Available
+PAT-38e43674,54,2025-02-05,2025-02-19,ICU,Male,Orthopedics,Available
+PAT-cbb0e264,79,2025-08-01,2025-08-14,emergency,Male,Pediatrics,Available
+PAT-25bc9f19,5,2025-04-19,2025-04-22,general_medicine,Male,Neurology,Occupied
+PAT-6634a1f1,21,2025-04-28,2025-05-03,emergency,Female,Cardiology,Available
+PAT-615c986b,80,2025-11-09,2025-11-15,ICU,Male,Gynecology,Available
+PAT-4ddbb040,28,2025-06-14,2025-06-21,general_medicine,Female,Pediatrics,Available
+PAT-3d0428f5,31,2025-04-22,2025-04-29,surgery,Male,Orthopedics,Occupied
+PAT-3a13e9c9,84,2025-05-14,2025-05-26,surgery,Female,Cardiology,Occupied
+PAT-4cda6597,21,2025-10-16,2025-10-30,surgery,Male,Pediatrics,Available
+PAT-4700c8eb,31,2025-05-02,2025-05-12,surgery,Male,Cardiology,Occupied
+PAT-2c237d3c,33,2025-08-22,2025-09-03,emergency,Male,Gynecology,Available
+PAT-672d2045,77,2025-09-04,2025-09-10,general_medicine,Male,Cardiology,Available
+PAT-14fa7097,14,2025-06-01,2025-06-09,surgery,Male,Pediatrics,Occupied
+PAT-a3b4d804,46,2025-01-19,2025-01-22,emergency,Male,Gynecology,Available
+PAT-48c5fe53,39,2025-12-20,2025-12-23,general_medicine,Female,Orthopedics,Occupied
+PAT-422edaf2,0,2025-04-03,2025-04-16,surgery,Female,Orthopedics,Occupied
+PAT-a9312113,38,2025-12-10,2025-12-20,ICU,Male,Pediatrics,Available
+PAT-b49f691c,70,2025-11-21,2025-12-01,emergency,Female,Pediatrics,Available
+PAT-46dc1924,6,2025-11-01,2025-11-08,surgery,Female,Neurology,Occupied
+PAT-827400ac,61,2025-06-20,2025-06-29,emergency,Female,Orthopedics,Available
+PAT-4b5dcf1f,78,2025-04-27,2025-05-08,emergency,Male,General Medicine,Available
+PAT-543309ab,25,2025-05-24,2025-06-02,ICU,Male,Pediatrics,Available
+PAT-92910d72,72,2025-11-08,2025-11-09,ICU,Male,Cardiology,Occupied
+PAT-1a762a65,85,2025-12-30,2026-01-02,ICU,Male,Pediatrics,Occupied
+PAT-ba4f5c45,77,2025-12-05,2025-12-08,emergency,Female,Gynecology,Available
+PAT-4222124b,40,2025-09-28,2025-10-01,emergency,Female,Gynecology,Occupied
+PAT-2b471903,52,2025-01-30,2025-02-08,surgery,Female,Gynecology,Occupied
+PAT-fb8fb2f8,17,2025-02-17,2025-02-19,general_medicine,Female,General Medicine,Occupied
+PAT-d5880b4b,7,2025-01-06,2025-01-18,surgery,Female,Gynecology,Occupied
+PAT-b89b8c18,35,2025-08-08,2025-08-12,general_medicine,Female,General Medicine,Occupied
+PAT-46840f68,65,2025-02-14,2025-02-20,emergency,Male,Pediatrics,Available
+PAT-8ef3ad8a,19,2025-08-09,2025-08-20,ICU,Female,Pediatrics,Available
+PAT-1674c12b,66,2025-01-03,2025-01-09,general_medicine,Male,Cardiology,Available
+PAT-2c67a185,63,2025-02-28,2025-03-07,ICU,Male,Gynecology,Occupied
+PAT-cdd5ed12,59,2025-11-27,2025-12-07,ICU,Male,Neurology,Occupied
+PAT-76252633,29,2025-03-03,2025-03-04,general_medicine,Male,General Medicine,Available
+PAT-20043fb2,30,2025-11-13,2025-11-21,ICU,Female,Gynecology,Occupied
+PAT-c56092ce,47,2025-05-16,2025-05-25,emergency,Male,Orthopedics,Available
+PAT-7d652ee5,44,2025-10-22,2025-11-01,surgery,Male,Gynecology,Available
+PAT-1bc9130a,82,2025-02-13,2025-02-26,ICU,Male,General Medicine,Available
+PAT-3a0dbe38,8,2025-08-08,2025-08-14,general_medicine,Male,Neurology,Occupied
+PAT-c165ed5f,57,2025-08-03,2025-08-06,emergency,Male,Cardiology,Occupied
+PAT-59afbd95,63,2025-10-19,2025-10-29,surgery,Male,Pediatrics,Available
+PAT-f83eb12d,85,2025-11-28,2025-12-08,surgery,Female,Neurology,Available
+PAT-cafc7802,10,2025-01-16,2025-01-24,surgery,Female,Cardiology,Available
+PAT-f1062bcb,58,2025-02-09,2025-02-22,emergency,Female,Orthopedics,Available
+PAT-95a1ef39,75,2025-10-27,2025-11-07,surgery,Male,Cardiology,Occupied
+PAT-34dc7d4b,79,2025-08-06,2025-08-08,emergency,Male,Orthopedics,Occupied
+PAT-434171f6,89,2025-05-26,2025-06-09,general_medicine,Female,Gynecology,Available
+PAT-03ae75aa,61,2025-08-27,2025-08-30,surgery,Male,Gynecology,Available
+PAT-b9e1e39a,66,2025-03-02,2025-03-03,surgery,Female,Cardiology,Occupied
+PAT-030f2b7d,44,2025-06-05,2025-06-10,ICU,Male,Orthopedics,Occupied
+PAT-32c5b5bf,26,2025-10-05,2025-10-15,ICU,Male,General Medicine,Available
+PAT-59318a32,52,2025-07-26,2025-07-30,general_medicine,Male,Pediatrics,Available
+PAT-750a0a30,22,2025-11-22,2025-11-30,general_medicine,Female,Pediatrics,Available
+PAT-04a8031e,83,2025-06-10,2025-06-22,ICU,Female,Gynecology,Occupied
+PAT-137f292a,0,2025-03-04,2025-03-10,emergency,Female,Neurology,Occupied
+PAT-b755d221,20,2025-06-12,2025-06-17,ICU,Male,Gynecology,Occupied
+PAT-90e7a0e1,88,2025-07-06,2025-07-14,ICU,Male,Orthopedics,Available
+PAT-a91cb1a0,28,2025-04-14,2025-04-27,general_medicine,Female,Pediatrics,Available
+PAT-4d9696ff,17,2025-09-21,2025-10-02,surgery,Male,Pediatrics,Occupied
+PAT-3d3a491d,53,2025-09-13,2025-09-19,emergency,Female,Neurology,Occupied
+PAT-6d2b84ce,19,2025-10-26,2025-11-08,ICU,Female,Neurology,Available
+PAT-3513ebf2,60,2025-12-31,2026-01-11,surgery,Female,Orthopedics,Occupied
+PAT-e4de7258,14,2025-09-10,2025-09-23,ICU,Female,Neurology,Occupied
+PAT-89a200af,74,2025-10-31,2025-11-05,general_medicine,Male,Gynecology,Available
+PAT-f596bf8d,85,2025-04-24,2025-04-25,surgery,Female,Cardiology,Occupied
+PAT-2c5361ff,31,2025-07-26,2025-08-06,general_medicine,Female,Pediatrics,Available
+PAT-beb4bcee,2,2025-07-16,2025-07-21,ICU,Male,Orthopedics,Available
+PAT-03d0b953,82,2025-03-09,2025-03-22,emergency,Male,Gynecology,Available
+PAT-f9dae984,18,2025-03-15,2025-03-28,general_medicine,Male,Neurology,Available
+PAT-1d6da110,19,2025-07-30,2025-08-06,ICU,Male,Gynecology,Available
+PAT-a7ccb35e,10,2025-07-02,2025-07-14,surgery,Female,Pediatrics,Available
+PAT-8e9b196c,62,2025-02-20,2025-02-25,general_medicine,Female,Orthopedics,Available
+PAT-4927475c,49,2025-09-03,2025-09-04,ICU,Female,Neurology,Occupied
+PAT-baa8e6ea,37,2025-01-14,2025-01-25,emergency,Female,Cardiology,Available
+PAT-3fe8fd51,10,2025-06-04,2025-06-11,emergency,Female,General Medicine,Available
+PAT-8a14f16e,86,2025-10-04,2025-10-16,general_medicine,Male,Neurology,Occupied
+PAT-b0c6f49d,86,2025-02-28,2025-03-09,emergency,Female,Gynecology,Occupied
+PAT-6e815497,21,2025-11-17,2025-11-24,general_medicine,Female,General Medicine,Occupied
+PAT-179de2b6,64,2025-04-14,2025-04-26,general_medicine,Male,Orthopedics,Available
+PAT-b1e8834f,85,2025-07-28,2025-08-10,surgery,Male,Cardiology,Occupied
+PAT-499c2003,49,2025-04-22,2025-04-23,ICU,Female,Orthopedics,Available
+PAT-a68f7f46,11,2025-04-28,2025-05-02,ICU,Male,Gynecology,Available
+PAT-b1caf36c,37,2025-06-05,2025-06-13,general_medicine,Male,Cardiology,Available
+PAT-f58ab9a1,12,2025-11-18,2025-11-23,emergency,Male,Neurology,Available
+PAT-12523d2c,65,2025-01-26,2025-02-06,ICU,Female,Gynecology,Occupied
+PAT-bdd5c115,39,2025-05-30,2025-06-03,general_medicine,Female,Orthopedics,Occupied
+PAT-64005d1e,28,2025-07-28,2025-08-01,ICU,Female,Orthopedics,Available
+PAT-b34bb9aa,45,2025-08-23,2025-08-30,surgery,Female,Cardiology,Available
+PAT-095c8db2,44,2025-08-27,2025-09-04,general_medicine,Female,Gynecology,Available
+PAT-9f159403,52,2025-03-29,2025-04-07,general_medicine,Female,Neurology,Occupied
+PAT-ddd92df7,50,2025-10-20,2025-10-30,ICU,Male,Cardiology,Available
+PAT-4dd464eb,56,2025-07-26,2025-07-31,ICU,Female,Gynecology,Available
+PAT-6cba7ba2,19,2025-08-19,2025-08-24,ICU,Male,Cardiology,Occupied
+PAT-a493ca8b,48,2025-03-05,2025-03-15,emergency,Male,Orthopedics,Occupied
+PAT-faa4a26f,28,2025-01-11,2025-01-13,general_medicine,Male,Pediatrics,Available
+PAT-c041a156,57,2025-09-08,2025-09-12,surgery,Male,Cardiology,Occupied
+PAT-579c19cc,87,2025-02-21,2025-02-26,surgery,Male,Orthopedics,Occupied
+PAT-8bfedd28,2,2025-05-06,2025-05-15,emergency,Female,Pediatrics,Available
+PAT-9f99f901,71,2025-08-24,2025-09-01,ICU,Female,Neurology,Occupied
+PAT-51264ef0,10,2025-07-11,2025-07-19,surgery,Male,Orthopedics,Available
+PAT-b8f2602e,55,2025-05-18,2025-05-25,ICU,Female,Cardiology,Occupied
+PAT-3def4cff,48,2025-05-05,2025-05-18,ICU,Female,Neurology,Available
+PAT-f9424721,35,2025-10-09,2025-10-15,emergency,Male,Orthopedics,Available
+PAT-48c843e9,81,2025-06-15,2025-06-23,ICU,Female,Pediatrics,Available
+PAT-9508b7eb,21,2025-01-31,2025-02-07,surgery,Male,Neurology,Occupied
+PAT-e367eedb,45,2025-07-09,2025-07-14,ICU,Female,Orthopedics,Available
+PAT-ac1d3980,9,2025-05-08,2025-05-22,ICU,Male,Gynecology,Occupied
+PAT-15da980a,43,2025-11-12,2025-11-26,ICU,Male,Orthopedics,Available
+PAT-d9ea1df9,16,2025-09-04,2025-09-14,emergency,Male,Gynecology,Available
+PAT-cd77d9dc,8,2025-03-30,2025-04-01,surgery,Female,Cardiology,Occupied
+PAT-40efa3f6,39,2025-04-16,2025-04-23,emergency,Male,Pediatrics,Available
+PAT-f9093e10,12,2025-02-01,2025-02-10,emergency,Female,Cardiology,Available
+PAT-434dd46d,19,2025-08-07,2025-08-12,surgery,Female,General Medicine,Occupied
+PAT-2cccd894,76,2025-07-20,2025-08-01,ICU,Female,Cardiology,Available
+PAT-c1717ebc,82,2025-11-23,2025-12-02,ICU,Male,Gynecology,Available
+PAT-c665c4c5,47,2025-10-22,2025-10-26,surgery,Female,Pediatrics,Available
+PAT-e11a0e0e,61,2025-12-31,2026-01-01,ICU,Female,Cardiology,Available
+PAT-b345f0fc,5,2025-03-18,2025-03-27,general_medicine,Female,Neurology,Occupied
+PAT-b85a5fe7,13,2025-11-06,2025-11-10,general_medicine,Female,Cardiology,Occupied
+PAT-f8e37525,71,2025-11-29,2025-12-10,emergency,Male,Neurology,Available
+PAT-8f5668e1,62,2025-04-30,2025-05-12,surgery,Female,Gynecology,Occupied
+PAT-e317c564,66,2025-05-11,2025-05-24,ICU,Male,General Medicine,Available
+PAT-f2e5dc0f,79,2025-04-06,2025-04-19,surgery,Male,Pediatrics,Occupied
+PAT-7dccad86,71,2025-03-13,2025-03-27,general_medicine,Male,Orthopedics,Available
+PAT-6621edc9,77,2025-04-09,2025-04-19,ICU,Male,Gynecology,Available
+PAT-a37a6ec6,58,2025-06-26,2025-07-07,ICU,Male,Neurology,Available
+PAT-2b540edc,68,2025-11-04,2025-11-13,surgery,Female,Orthopedics,Available
+PAT-457ff3a7,84,2025-03-25,2025-04-01,surgery,Female,Neurology,Available
+PAT-03a1bd78,3,2025-02-14,2025-02-24,emergency,Male,Orthopedics,Available
+PAT-4fbfd721,76,2025-09-30,2025-10-08,emergency,Male,Orthopedics,Occupied
+PAT-d3f2dd9c,22,2025-11-24,2025-12-02,surgery,Male,Gynecology,Available
+PAT-9aa16259,58,2025-08-17,2025-08-18,emergency,Female,Orthopedics,Occupied
+PAT-19b54c42,88,2025-09-29,2025-10-06,emergency,Male,General Medicine,Available
+PAT-1e6f872e,81,2025-10-13,2025-10-20,general_medicine,Male,Cardiology,Occupied
+PAT-7cf0d13d,81,2025-06-20,2025-06-25,emergency,Female,Orthopedics,Occupied
+PAT-8a179cc0,20,2025-02-24,2025-02-25,ICU,Female,Gynecology,Occupied
+PAT-89abf617,82,2025-05-23,2025-06-01,ICU,Female,Neurology,Available
+PAT-5504ba86,52,2025-06-29,2025-07-13,general_medicine,Female,Neurology,Available
+PAT-ceeb126b,56,2025-05-17,2025-05-23,ICU,Male,Pediatrics,Occupied
+PAT-80dd2e5c,43,2025-11-27,2025-11-29,general_medicine,Male,General Medicine,Available
+PAT-36cb1cbd,8,2025-09-28,2025-10-10,ICU,Male,Neurology,Occupied
+PAT-87f6ac23,77,2025-03-13,2025-03-24,emergency,Male,Neurology,Available
+PAT-ed357431,64,2025-08-20,2025-08-30,general_medicine,Female,Gynecology,Occupied
+PAT-60ed37b1,42,2025-09-30,2025-10-01,general_medicine,Male,Neurology,Occupied
+PAT-94aeadf6,84,2025-02-25,2025-03-03,emergency,Male,Gynecology,Available
+PAT-12de1869,49,2025-07-11,2025-07-14,surgery,Female,Neurology,Occupied
+PAT-94cb5d4d,48,2025-05-19,2025-05-27,general_medicine,Female,General Medicine,Available
+PAT-70bb0e7e,65,2025-04-14,2025-04-17,general_medicine,Male,Pediatrics,Occupied
+PAT-e82f0475,27,2025-09-30,2025-10-06,general_medicine,Male,Orthopedics,Occupied
+PAT-ebe3b87a,55,2025-01-28,2025-01-30,surgery,Female,Orthopedics,Available
+PAT-e67c1ba9,36,2025-09-01,2025-09-05,general_medicine,Male,Orthopedics,Available
+PAT-41173daa,89,2025-10-26,2025-10-30,emergency,Female,General Medicine,Available
+PAT-e52c726d,51,2025-10-15,2025-10-16,surgery,Female,Neurology,Occupied
+PAT-e8583ff8,59,2025-03-24,2025-04-03,surgery,Female,Orthopedics,Available
+PAT-815c95f7,55,2025-10-11,2025-10-12,general_medicine,Female,Gynecology,Occupied
+PAT-5cc7a8f3,47,2025-04-07,2025-04-19,ICU,Female,General Medicine,Occupied
+PAT-7fcb697b,87,2025-05-17,2025-05-25,ICU,Male,Gynecology,Available
+PAT-e336cf92,30,2025-05-22,2025-06-04,ICU,Female,General Medicine,Available
+PAT-de47a134,33,2025-09-07,2025-09-15,general_medicine,Female,Cardiology,Occupied
+PAT-9d7954a0,25,2025-12-26,2026-01-05,ICU,Male,Neurology,Occupied
+PAT-14f1c2aa,66,2025-01-05,2025-01-08,ICU,Female,Cardiology,Available
+PAT-11ee6f72,79,2025-09-28,2025-10-01,emergency,Male,Gynecology,Available
+PAT-891c504e,52,2025-10-09,2025-10-11,ICU,Male,Orthopedics,Available
+PAT-14da658e,49,2025-05-20,2025-05-27,ICU,Female,Gynecology,Available
+PAT-c0bf222d,86,2025-07-02,2025-07-03,ICU,Female,Orthopedics,Available
+PAT-3216da7d,65,2025-05-29,2025-06-07,surgery,Female,Orthopedics,Occupied
+PAT-c83919b3,48,2025-08-02,2025-08-07,ICU,Female,Orthopedics,Occupied
+PAT-6be0cd8e,37,2025-05-23,2025-06-02,emergency,Female,Orthopedics,Occupied
+PAT-b193bc13,45,2025-10-04,2025-10-12,emergency,Male,Neurology,Occupied
+PAT-fad5831d,69,2025-12-29,2026-01-10,emergency,Male,Orthopedics,Available
+PAT-fc5ca97c,67,2025-01-18,2025-01-23,general_medicine,Male,Orthopedics,Available
+PAT-346a17fa,85,2025-05-31,2025-06-03,ICU,Male,Cardiology,Available
+PAT-65dc9ad2,9,2025-06-29,2025-06-30,emergency,Male,Gynecology,Occupied
+PAT-2ab794c1,74,2025-07-11,2025-07-16,emergency,Female,Cardiology,Occupied
+PAT-5000e528,55,2025-08-25,2025-08-31,general_medicine,Male,Pediatrics,Available
+PAT-4c0e490a,68,2025-02-28,2025-03-02,emergency,Female,Cardiology,Available
+PAT-7d64a95f,59,2025-01-30,2025-02-10,general_medicine,Female,Orthopedics,Occupied
+PAT-ebb3c35a,75,2025-03-31,2025-04-13,general_medicine,Male,Orthopedics,Occupied
+PAT-558821bb,62,2025-08-08,2025-08-18,ICU,Male,Gynecology,Available
+PAT-63891592,72,2025-08-11,2025-08-21,general_medicine,Female,General Medicine,Available
+PAT-d088a1ed,55,2025-06-11,2025-06-18,general_medicine,Female,Orthopedics,Occupied
+PAT-fdb73cb6,51,2025-03-17,2025-03-18,emergency,Female,Orthopedics,Available
+PAT-e274866d,39,2025-04-21,2025-04-22,emergency,Female,Neurology,Available
+PAT-635d2caf,62,2025-07-01,2025-07-11,surgery,Male,Neurology,Available
+PAT-1fd2e6ec,78,2025-01-22,2025-01-28,emergency,Female,Gynecology,Occupied
+PAT-aca98c7e,79,2025-07-09,2025-07-10,ICU,Female,Orthopedics,Occupied
+PAT-a8b5abcb,89,2025-05-25,2025-05-31,emergency,Female,General Medicine,Occupied
+PAT-461dedf5,77,2025-09-19,2025-09-22,emergency,Male,Orthopedics,Occupied
+PAT-31f00a7c,71,2025-05-23,2025-05-29,emergency,Female,Cardiology,Occupied
+PAT-abcfeffc,12,2025-09-02,2025-09-10,emergency,Female,Orthopedics,Occupied
+PAT-0a87540a,59,2025-07-16,2025-07-22,surgery,Male,Neurology,Occupied
+PAT-27b993e3,88,2025-01-26,2025-01-31,surgery,Female,Orthopedics,Available
+PAT-8ad27bf1,19,2025-07-17,2025-07-28,surgery,Male,Gynecology,Available
+PAT-17a63d35,3,2025-09-06,2025-09-20,emergency,Female,Cardiology,Available
+PAT-8607b61c,12,2025-02-13,2025-02-20,general_medicine,Female,Cardiology,Available
+PAT-5934e691,18,2025-08-27,2025-09-08,general_medicine,Male,Gynecology,Available
+PAT-5d56d3a0,80,2025-04-10,2025-04-13,general_medicine,Female,Gynecology,Available
+PAT-bf9bf276,47,2025-12-26,2026-01-03,ICU,Female,Cardiology,Available
+PAT-dd72a01f,70,2025-02-19,2025-02-20,general_medicine,Female,Cardiology,Occupied
+PAT-3ffec18c,31,2025-05-21,2025-05-27,ICU,Female,Orthopedics,Occupied
+PAT-02ae68da,36,2025-08-27,2025-09-10,ICU,Female,Orthopedics,Available
+PAT-83f67cae,39,2025-07-27,2025-08-08,general_medicine,Female,Pediatrics,Available
+PAT-9026b07c,61,2025-12-12,2025-12-24,ICU,Female,Neurology,Occupied
+PAT-388ea10a,65,2025-09-16,2025-09-22,general_medicine,Male,Gynecology,Available
+PAT-7912b691,23,2025-06-20,2025-06-29,general_medicine,Male,Orthopedics,Available
+PAT-5794ee22,44,2025-09-21,2025-09-28,surgery,Male,Gynecology,Occupied
+PAT-5fa9792c,56,2025-10-13,2025-10-23,ICU,Male,Neurology,Available
+PAT-94a68ef3,17,2025-07-16,2025-07-21,surgery,Female,General Medicine,Occupied
+PAT-ccc84f5b,38,2025-04-08,2025-04-19,ICU,Female,Cardiology,Available
+PAT-87356f08,68,2025-05-02,2025-05-15,surgery,Male,Neurology,Occupied
+PAT-e4376ecc,22,2025-10-15,2025-10-25,surgery,Male,Pediatrics,Occupied
+PAT-bf1b13b6,14,2025-04-06,2025-04-15,ICU,Female,Orthopedics,Occupied
+PAT-d78122d6,73,2025-01-06,2025-01-14,ICU,Female,Cardiology,Available
+PAT-8a396e1e,10,2025-04-06,2025-04-10,general_medicine,Male,Cardiology,Occupied
+PAT-a80a5e86,80,2025-08-02,2025-08-10,emergency,Male,General Medicine,Available
+PAT-6383ea9f,34,2025-07-12,2025-07-16,surgery,Male,General Medicine,Available
+PAT-b6d29dbc,10,2025-09-08,2025-09-18,emergency,Male,Neurology,Available
+PAT-8427bce7,8,2025-03-17,2025-03-24,ICU,Female,Neurology,Available
+PAT-a34a64e2,17,2025-09-08,2025-09-17,emergency,Male,General Medicine,Occupied
+PAT-46c66a3e,22,2025-03-24,2025-04-06,surgery,Female,Cardiology,Occupied
+PAT-104fadfd,46,2025-09-13,2025-09-20,ICU,Male,Neurology,Available
+PAT-780be065,24,2025-08-25,2025-09-02,ICU,Male,Pediatrics,Available
+PAT-c2d93cd1,73,2025-11-10,2025-11-24,surgery,Male,Cardiology,Occupied
+PAT-798f4567,77,2025-04-26,2025-04-28,general_medicine,Male,Pediatrics,Available
+PAT-f4ce80d4,74,2025-03-26,2025-03-31,general_medicine,Male,General Medicine,Occupied
+PAT-3fb1487b,44,2025-07-28,2025-08-11,general_medicine,Female,General Medicine,Available
+PAT-1cf19479,75,2025-10-25,2025-10-27,emergency,Female,General Medicine,Available
+PAT-3d429a6c,15,2025-08-31,2025-09-02,emergency,Male,Orthopedics,Occupied
+PAT-f73799b5,58,2025-05-24,2025-05-30,surgery,Female,Cardiology,Available
+PAT-fffe27aa,59,2025-09-03,2025-09-05,emergency,Female,Orthopedics,Occupied
+PAT-177e05c7,58,2025-10-10,2025-10-18,general_medicine,Male,Cardiology,Available
+PAT-dd618adb,62,2025-03-04,2025-03-12,general_medicine,Male,Cardiology,Available
+PAT-b8f64c3e,12,2025-02-12,2025-02-13,surgery,Female,Gynecology,Available
+PAT-3ef63f63,35,2025-01-08,2025-01-13,emergency,Male,Gynecology,Occupied
+PAT-b833050b,79,2025-10-11,2025-10-17,ICU,Male,Pediatrics,Available
+PAT-a1bec809,46,2025-04-11,2025-04-25,ICU,Female,Pediatrics,Available
+PAT-90ba3a0f,15,2025-03-12,2025-03-25,surgery,Female,Cardiology,Available
+PAT-b0173543,28,2025-08-16,2025-08-30,general_medicine,Male,Cardiology,Available
+PAT-7fcb5d8b,76,2025-01-21,2025-01-26,surgery,Female,Orthopedics,Occupied
+PAT-f752da62,54,2025-10-12,2025-10-16,ICU,Male,Gynecology,Occupied
+PAT-5651b17c,69,2025-06-13,2025-06-15,general_medicine,Male,General Medicine,Available
+PAT-b2fe6226,15,2025-12-22,2026-01-05,surgery,Male,Neurology,Occupied
+PAT-c378810a,86,2025-05-21,2025-06-01,surgery,Female,Pediatrics,Available
+PAT-456fd090,21,2025-11-25,2025-12-02,ICU,Male,Gynecology,Available
+PAT-596d9b6a,37,2025-04-26,2025-05-05,surgery,Female,Neurology,Available
+PAT-a432ced1,8,2025-02-19,2025-02-21,ICU,Male,Cardiology,Occupied
+PAT-9603be1e,19,2025-05-06,2025-05-17,general_medicine,Male,General Medicine,Occupied
+PAT-c0ec69bd,21,2025-11-20,2025-12-03,surgery,Male,Neurology,Occupied
+PAT-4abfea64,76,2025-05-17,2025-05-27,surgery,Male,Pediatrics,Occupied
+PAT-974c0a52,6,2025-05-27,2025-06-06,ICU,Male,Cardiology,Occupied
+PAT-4e444d5a,30,2025-06-12,2025-06-21,ICU,Female,Neurology,Occupied
+PAT-b3ba89f4,60,2025-12-05,2025-12-10,general_medicine,Male,Neurology,Occupied
+PAT-1d5f8550,65,2025-05-18,2025-05-20,general_medicine,Male,Orthopedics,Occupied
+PAT-b9712ea6,59,2025-09-30,2025-10-14,ICU,Female,Orthopedics,Occupied
+PAT-0af52f3d,30,2025-03-29,2025-03-30,general_medicine,Female,Orthopedics,Available
+PAT-833f3338,84,2025-11-23,2025-12-03,ICU,Male,Orthopedics,Occupied
+PAT-b87126f2,80,2025-12-14,2025-12-15,emergency,Male,Orthopedics,Occupied
+PAT-a4976bc6,52,2025-07-18,2025-07-20,surgery,Male,General Medicine,Occupied
+PAT-869968c7,3,2025-01-19,2025-01-29,ICU,Female,Pediatrics,Occupied
+PAT-5a0ce14d,39,2025-06-20,2025-07-01,surgery,Female,Orthopedics,Occupied
+PAT-0307a640,11,2025-10-10,2025-10-11,general_medicine,Male,Pediatrics,Occupied
+PAT-110d5794,48,2025-11-12,2025-11-18,ICU,Female,Orthopedics,Occupied
+PAT-c7aac776,83,2025-10-11,2025-10-20,surgery,Male,General Medicine,Occupied
+PAT-8700b93a,9,2025-10-25,2025-11-02,ICU,Male,Orthopedics,Occupied
+PAT-e5d6a9cf,76,2025-12-27,2026-01-02,ICU,Female,Gynecology,Occupied
+PAT-2fa08c0d,79,2025-01-22,2025-01-31,emergency,Male,Gynecology,Occupied
+PAT-a01bf534,26,2025-12-02,2025-12-04,emergency,Male,Orthopedics,Available
+PAT-87fa07bd,89,2025-11-18,2025-11-30,emergency,Male,Neurology,Available
+PAT-8f07e894,72,2025-12-12,2025-12-21,ICU,Male,Cardiology,Occupied
+PAT-4ae301e1,47,2025-02-08,2025-02-20,ICU,Male,Orthopedics,Occupied
+PAT-e2ef9c5f,64,2025-05-04,2025-05-08,general_medicine,Male,Orthopedics,Available
