@@ -15,8 +15,9 @@ st.set_page_config(
 )
 
 # ===================== SESSION STATE =====================
-if "logged_in" not in st.session_state:
-    st.session_state["logged_in"] = False
+if "login" not in st.session_state:
+    st.session_state["login"] = False
+
 if "hospital" not in st.session_state:
     st.session_state["hospital"] = None
 
@@ -42,11 +43,11 @@ def login_page():
         else:
             st.error("Invalid username or password")
 # session state
-if "logged_in" not in st.session_state:
-    st.session_state["logged_in"] = False
+if "login" not in st.session_state:
+    st.session_state["login"] = False
+
 if "hospital" not in st.session_state:
     st.session_state["hospital"] = None
-
 # show login if not logged in
 if not st.session_state["logged_in"]:
     login_page()
@@ -233,6 +234,7 @@ st.markdown(f"""
     © 2026 Diksha Tiwari
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
