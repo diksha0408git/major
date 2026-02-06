@@ -15,10 +15,10 @@ st.set_page_config(
 )
 
 # ===================== SESSION STATE =====================
-if "login" not in st.session_state:
-    st.session_state.login = False
+if "logged_in" not in st.session_state:
+    st.session_state["logged_in"] = False
 if "hospital" not in st.session_state:
-    st.session_state.hospital = None
+    st.session_state["hospital"] = None
 
 # ===================== LOGIN PAGE =====================
 def login_page():
@@ -233,6 +233,7 @@ st.markdown(f"""
     © 2026 Diksha Tiwari
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
