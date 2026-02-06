@@ -114,7 +114,7 @@ if "hospital" not in st.session_state:
 
 # show login if not logged in
 if not st.session_state["logged_in"]:
-    login()
+    login_page()
     st.stop()
 
 # ===================== LOAD DATA =====================
@@ -298,6 +298,7 @@ st.markdown(f"""
     © 2026 Diksha Tiwari
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
