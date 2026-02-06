@@ -21,41 +21,56 @@ if "hospital" not in st.session_state:
     st.session_state.hospital = None
 
 # ===================== LOGIN PAGE =====================
-def login_page():
-    st.markdown("""
-    <style>
-    .login-box {
-        background-color:#0f172a;
-        padding:30px;
-        border-radius:12px;
-        width:420px;
-        margin:auto;
-        box-shadow:0 0 25px rgba(0,0,0,0.6);
-    }
-    </style>
-    """, unsafe_allow_html=True)
+def login():
+    st.markdown(
+        """
+        <style>
+        .login-box {
+            width: 350px;
+            margin: 100px auto;
+            padding: 30px;
+            border-radius: 10px;
+            background-color: #f5f5f5;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+        }
+        .login-title {
+            text-align: center;
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
 
-    st.markdown("<div class='login-box'>", unsafe_allow_html=True)
-    st.markdown("<h2 style='color:white;text-align:center'> Hospital Login</h2>", unsafe_allow_html=True)
+    st.markdown('<div class="login-box">', unsafe_allow_html=True)
+    st.markdown('<div class="login-title">Hospital Login</div>', unsafe_allow_html=True)
 
-    with st.form("login_form"):
-        username = st.text_input("Username")
-        password = st.text_input("Password", type="password")
-        hospital = st.selectbox("Select Hospital", ["Hospital1", "Hospital2"])
-        btn = st.form_submit_button("Login")
+    username = st.text_input("Username")
+    password = st.text_input("Password", type="password")
+    hospital = st.selectbox("Select Hospital", ["Hospital1", "Hospital2"])
 
-    if btn:
-        if username == "admin" and password == "admin123":
-            st.session_state.login = True
-            st.session_state.hospital = hospital
+    if st.button("Login", use_container_width=True):
+        if username == "admin" and password == "1234":
+            st.session_state["logged_in"] = True
+            st.session_state["hospital"] = hospital
             st.rerun()
         else:
-            st.error("Invalid Credentials")
+            st.error("Invalid username or password")
 
-    st.markdown("</div>", unsafe_allow_html=True)
+    st.markdown('</div>', unsafe_allow_html=True)
 
-if not st.session_state.login:
-    login_page()
+
+# session state
+if "logged_in" not in st.session_state:
+    st.session_state["logged_in"] = False
+if "hospital" not in st.session_state:
+    st.session_state["hospital"] = None
+
+# show login if not logged in
+if not st.session_state["logged_in"]:
+    login()
     st.stop()
 
 # ===================== LOAD DATA =====================
@@ -237,3 +252,4 @@ st.markdown(f"""
     © 2026 Diksha Tiwari
 </div>
 """, unsafe_allow_html=True)
+
