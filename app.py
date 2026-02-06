@@ -14,9 +14,9 @@ st.set_page_config(
     layout="wide"
 )
 
-# ===================== SESSION STATE =====================
-if "login" not in st.session_state:
-    st.session_state["login"] = False
+# ================= SESSION STATE =================
+if "logged_in" not in st.session_state:
+    st.session_state["logged_in"] = False
 
 if "hospital" not in st.session_state:
     st.session_state["hospital"] = None
@@ -24,35 +24,24 @@ if "hospital" not in st.session_state:
 # ===================== LOGIN PAGE =====================
 def login_page():
     st.title("Hospital Analytics Login")
-    st.write("Please enter your credentials to continue.")
 
     with st.form("login_form"):
         username = st.text_input("Username")
         password = st.text_input("Password", type="password")
-        hospital = st.selectbox(
-            "Select Hospital",
-            ["Hospital1", "Hospital2"]
-        )
+        hospital = st.selectbox("Select Hospital", ["Hospital1", "Hospital2"])
         login_btn = st.form_submit_button("Login")
 
     if login_btn:
         if username == "admin" and password == "admin123":
-            st.session_state.login = True
-            st.session_state.hospital = hospital
+            st.session_state["logged_in"] = True
+            st.session_state["hospital"] = hospital
             st.rerun()
         else:
             st.error("Invalid username or password")
-# session state
-if "login" not in st.session_state:
-    st.session_state["login"] = False
-
-if "hospital" not in st.session_state:
-    st.session_state["hospital"] = None
 # show login if not logged in
 if not st.session_state["logged_in"]:
     login_page()
     st.stop()
-
 # ===================== LOAD DATA =====================
 if st.session_state.hospital == "Hospital1":
     df = pd.read_csv("appointments_final.csv")   # hospital1 → appointments
@@ -81,9 +70,9 @@ st.sidebar.write("Hospital:", st.session_state["hospital"])
 
 # Logout button
 if st.sidebar.button("Logout"):
-    st.session_state.clear()   # clears all session data
+    st.session_state["logged_in"] = False
+    st.session_state["hospital"] = None
     st.rerun()
-
 # ===================== KPI =====================
 st.title("Hospital Dashboard")
 
@@ -234,6 +223,7 @@ st.markdown(f"""
     © 2026 Diksha Tiwari
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
