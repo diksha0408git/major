@@ -24,85 +24,49 @@ if "hospital" not in st.session_state:
 def login_page():
     st.markdown("""
     <style>
-    .main {
-        background: linear-gradient(135deg, #0f172a, #020617);
-    }
-
-    .login-container {
+    .login-wrapper {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 90vh;
+        height: 85vh;
     }
-
-    .login-box {
+    .login-card {
         background: white;
-        padding: 40px;
-        border-radius: 12px;
-        width: 420px;
-        box-shadow: 0px 10px 30px rgba(0,0,0,0.2);
+        padding: 35px;
+        border-radius: 10px;
+        width: 380px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.15);
     }
-
     .login-title {
-        font-size: 26px;
+        font-size: 24px;
         font-weight: 600;
         text-align: center;
-        margin-bottom: 25px;
-        color: #0f172a;
-    }
-
-    .stTextInput > div > div > input {
-        border-radius: 8px;
-        padding: 10px;
-    }
-
-    .stSelectbox > div > div {
-        border-radius: 8px;
-    }
-
-    .stButton > button {
-        width: 100%;
-        background-color: #0f172a;
-        color: white;
-        padding: 10px;
-        border-radius: 8px;
-        border: none;
-        font-weight: 500;
-    }
-
-    .stButton > button:hover {
-        background-color: #1e293b;
-    }
-
-    .footer-text {
-        text-align: center;
-        font-size: 12px;
-        margin-top: 15px;
-        color: #64748b;
+        margin-bottom: 20px;
+        color: #111827;
     }
     </style>
     """, unsafe_allow_html=True)
 
-    st.markdown("<div class='login-container'>", unsafe_allow_html=True)
-    st.markdown("<div class='login-box'>", unsafe_allow_html=True)
-
-    st.markdown("<div class='login-title'>Hospital Analytics Login</div>", unsafe_allow_html=True)
+    st.markdown("<div class='login-wrapper'>", unsafe_allow_html=True)
+    st.markdown("<div class='login-card'>", unsafe_allow_html=True)
+    st.markdown("<div class='login-title'>Hospital Login</div>", unsafe_allow_html=True)
 
     with st.form("login_form"):
         username = st.text_input("Username")
         password = st.text_input("Password", type="password")
-        hospital = st.selectbox("Select Hospital", ["Hospital1", "Hospital2"])
+        hospital = st.selectbox(
+            "Select Hospital",
+            ["Hospital1", "Hospital2"]
+        )
         login_btn = st.form_submit_button("Login")
 
     if login_btn:
         if username == "admin" and password == "admin123":
-            st.session_state["login"] = True
-            st.session_state["hospital"] = hospital
+            st.session_state.login = True
+            st.session_state.hospital = hospital
             st.rerun()
         else:
             st.error("Invalid username or password")
-
-    st.markdown("<div class='footer-text'>Hospital Analytics System</div>", unsafe_allow_html=True)
 
     st.markdown("</div>", unsafe_allow_html=True)
     st.markdown("</div>", unsafe_allow_html=True)
@@ -298,6 +262,7 @@ st.markdown(f"""
     © 2026 Diksha Tiwari
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
