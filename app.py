@@ -90,16 +90,18 @@ def load_from_db(table):
 
 # ===================== SIDEBAR =====================
 st.sidebar.title("Navigation")
+
 page = st.sidebar.radio(
-    "Go To",
+    "Go to",
     ["Dashboard", "EDA", "Visualizations", "Correlation", "Forecasting", "Database"]
 )
 
 st.sidebar.markdown("---")
-st.sidebar.write("Hospital:", st.session_state.hospital)
+st.sidebar.write("Hospital:", st.session_state["hospital"])
 
+# Logout button
 if st.sidebar.button("Logout"):
-    st.session_state.login = False
+    st.session_state.clear()   # clears all session data
     st.rerun()
 
 # ===================== KPI =====================
@@ -252,4 +254,5 @@ st.markdown(f"""
     © 2026 Diksha Tiwari
 </div>
 """, unsafe_allow_html=True)
+
 
