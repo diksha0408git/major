@@ -22,34 +22,8 @@ if "hospital" not in st.session_state:
 
 # ===================== LOGIN PAGE =====================
 def login_page():
-    st.markdown("""
-    <style>
-    .login-wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 85vh;
-    }
-    .login-card {
-        background: white;
-        padding: 35px;
-        border-radius: 10px;
-        width: 380px;
-        box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-    }
-    .login-title {
-        font-size: 24px;
-        font-weight: 600;
-        text-align: center;
-        margin-bottom: 20px;
-        color: #111827;
-    }
-    </style>
-    """, unsafe_allow_html=True)
-
-    st.markdown("<div class='login-wrapper'>", unsafe_allow_html=True)
-    st.markdown("<div class='login-card'>", unsafe_allow_html=True)
-    st.markdown("<div class='login-title'>Hospital Login</div>", unsafe_allow_html=True)
+    st.title("Hospital Analytics Login")
+    st.write("Please enter your credentials to continue.")
 
     with st.form("login_form"):
         username = st.text_input("Username")
@@ -67,9 +41,6 @@ def login_page():
             st.rerun()
         else:
             st.error("Invalid username or password")
-
-    st.markdown("</div>", unsafe_allow_html=True)
-    st.markdown("</div>", unsafe_allow_html=True)
 # session state
 if "logged_in" not in st.session_state:
     st.session_state["logged_in"] = False
@@ -262,6 +233,7 @@ st.markdown(f"""
     © 2026 Diksha Tiwari
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
