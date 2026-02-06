@@ -91,25 +91,27 @@ def login_page():
     st.markdown("<h1 style='text-align:center'>🏥 Hospital Executive Analytics</h1>", unsafe_allow_html=True)
     st.caption("Secure access to hospital insights")
 
-    with st.form("login"):
-        user = st.text_input("Username")
-        pwd = st.text_input("Password", type="password")
-        hospital = st.selectbox("Select Hospital", ["Hospital1", "Hospital2"])
+    # IMPORTANT → keys use karo
+    with st.form("login_form"):
+
+        user = st.text_input("Username", key="user")
+        pwd = st.text_input("Password", type="password", key="pwd")
+        hospital = st.selectbox("Select Hospital", ["Hospital1", "Hospital2"], key="hospital_select")
 
         btn = st.form_submit_button("Login")
 
     if btn:
+
         if user == "admin" and pwd == "admin123":
-            st.session_state.login = True
-            st.session_state.hospital = hospital
+
+            st.session_state["login"] = True
+            st.session_state["hospital"] = hospital
+
             st.rerun()
+
         else:
             st.error("Invalid credentials")
-
-if not st.session_state.login:
-    login_page()
-    st.stop()
-
+     
 # ===================== LOAD DATA =====================
 if st.session_state.hospital == "Hospital1":
     df = pd.read_csv("patients_final.csv")
@@ -327,3 +329,4 @@ st.markdown(f"""
 Hospital Executive Analytics v3.0 | Hospital: <b>{st.session_state.hospital}</b> | © 2026 Diksha Tiwari
 </div>
 """, unsafe_allow_html=True)
+
