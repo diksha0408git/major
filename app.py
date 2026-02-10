@@ -151,22 +151,6 @@ if st.sidebar.button("Logout"):
     st.session_state["logged_in"] = False
     st.session_state["hospital"] = None
     st.rerun()
-# ===================== KPI =====================
-st.title("Hospital Dashboard")
-
-if st.session_state.hospital == "Hospital1":
-    c1, c2, c3, c4 = st.columns(4)
-    c1.metric("Total Appointments", len(df))
-    c2.metric("Departments", df["department"].nunique())
-    c3.metric("Completed", (df["status"] == "Completed").sum())
-    c4.metric("Beds Available", df["bed_availability"].sum())
-
-else:
-    c1, c2, c3, c4 = st.columns(4)
-    c1.metric("Total Patients", len(df))
-    c2.metric("Average Age", round(df["age"].mean(), 1))
-    c3.metric("Departments", df["department"].nunique())
-    c4.metric("Beds Available", df["bed_availability"].sum())
 
 # ===================== CLEAN COLUMNS FOR CHARTS =====================
 ignore_cols = [c for c in df.columns if "id" in c.lower() or "date" in c.lower()]
@@ -486,6 +470,7 @@ st.markdown(f"""
     © 2026 Diksha Tiwari
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
