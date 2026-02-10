@@ -199,45 +199,123 @@ elif page == "EDA":
 
 # ===================== VISUALIZATIONS =====================
 elif page == "Visualizations":
-    st.title("Advanced Visualizations")
 
-    chart = st.selectbox(
-        "Select Chart Type",
-        ["Histogram", "Bar Chart", "Pie Chart", "Scatter Plot", "Box Plot"]
-    )
+    st.title("📊 Hospital Analytics Visualizations")
 
-    if chart == "Histogram":
-        col = st.selectbox("Column", num_cols)
-        fig, ax = plt.subplots()
-        ax.hist(df[col], bins=20)
-        st.pyplot(fig)
+    # ================= PATIENT DATA =================
+    if st.session_state.hospital == "Hospital2":
 
-    elif chart == "Bar Chart":
-        col = st.selectbox("Column", cat_cols)
-        fig, ax = plt.subplots()
-        df[col].value_counts().plot.bar(ax=ax)
-        st.pyplot(fig)
+        col1, col2 = st.columns(2)
 
-    elif chart == "Pie Chart":
-        col = st.selectbox("Column", cat_cols)
-        fig, ax = plt.subplots()
-        df[col].value_counts().plot.pie(autopct="%1.1f%%", ax=ax)
-        ax.set_ylabel("")
-        st.pyplot(fig)
+        # Gender Bar Chart
+        with col1:
+            fig = px.bar(
+                df,
+                x="gender",
+                title="Gender Distribution",
+                color="gender"
+            )
+            st.plotly_chart(fig, use_container_width=True)
 
-    elif chart == "Scatter Plot":
-        x = st.selectbox("X Axis", num_cols)
-        y = st.selectbox("Y Axis", num_cols)
-        fig, ax = plt.subplots()
-        ax.scatter(df[x], df[y])
-        st.pyplot(fig)
+        # Department Pie Chart
+        with col2:
+            fig = px.pie(
+                df,
+                names="department",
+                title="Department Distribution"
+            )
+            st.plotly_chart(fig, use_container_width=True)
 
-    elif chart == "Box Plot":
-        col = st.selectbox("Column", num_cols)
-        fig, ax = plt.subplots()
-        ax.boxplot(df[col])
-        st.pyplot(fig)
+        # Age Distribution
+        col3, col4 = st.columns(2)
 
+        with col3:
+            fig = px.histogram(
+                df,
+                x="age",
+                nbins=30,
+                title="Age Distribution"
+            )
+            st.plotly_chart(fig, use_container_width=True)
+
+        # Service Graph
+        if "service" in df.columns:
+            with col4:
+                fig = px.bar(
+                    df["service"].value_counts().reset_index(),
+                    x="service",
+                    y="count",
+                    title="Hospital Services Usage"
+                )
+                st.plotly_chart(fig, use_container_width=True)
+
+        # Length of Stay vs Age (VERY PROFESSIONAL)
+        if "length_of_stay" in df.columns:
+            fig = px.scatter(
+                df,
+                x="age",
+                y="length_of_stay",
+                color="gender",
+                title="Age vs Length of Stay"
+            )
+            st.plotly_chart(fig, use_container_width=True)
+
+    # ================= APPOINTMENT DATA =================
+    else:
+
+        col1, col2 = st.columns(2)
+
+        # Department Bar Chart
+        with col1:
+            fig = px.bar(
+                df,
+                x="department",
+                title="Appointments by Department",
+                color="department"
+            )
+            st.plotly_chart(fig, use_container_width=True)
+
+        # Status Pie Chart
+        with col2:
+            fig = px.pie(
+                df,
+                names="status",
+                title="Appointment Status"
+            )
+            st.plotly_chart(fig, use_container_width=True)
+
+        col3, col4 = st.columns(2)
+
+        # Appointment Index vs Age
+        with col3:
+            fig = px.scatter(
+                df,
+                x=df.index,
+                y="age",
+                color="status",
+                title="Appointment Index vs Age",
+                labels={"x": "Appointment Index"}
+            )
+            st.plotly_chart(fig, use_container_width=True)
+
+        # Daily Appointment Trend (VERY IMPORTANT)
+        date_cols = [c for c in df.columns if "date" in c.lower()]
+
+        if date_cols:
+            date_col = date_cols[0]
+
+            df[date_col] = pd.to_datetime(df[date_col])
+
+            daily = df.groupby(date_col).size().reset_index(name="appointments")
+
+            with col4:
+                fig = px.line(
+                    daily,
+                    x=date_col,
+                    y="appointments",
+                    title="Daily Appointment Trend"
+                )
+                st.plotly_chart(fig, use_container_width=True)
 # ===================== CORRELATION =====================
 elif page == "Correlation":
     st.title("Correlation Heatmap")
@@ -299,6 +377,7 @@ st.markdown(f"""
     © 2026 Diksha Tiwari
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
