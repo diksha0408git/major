@@ -140,7 +140,7 @@ st.sidebar.title("Navigation")
 
 page = st.sidebar.radio(
     "Go to",
-    ["Dashboard", "Visualizations", "Correlation", "Forecasting", "Database"]
+    ["Overview", "Visualizations", "Correlation", "Forecasting", "Database"]
 )
 
 st.sidebar.markdown("---")
@@ -158,7 +158,7 @@ num_cols = [c for c in df.select_dtypes(include=np.number).columns if c not in i
 cat_cols = [c for c in df.select_dtypes(include="object").columns if c not in ignore_cols]
 
 # ===================== DASHBOARD =====================
-if page == "Dashboard":
+if page == "Overview":
 
     st.title("Hospital Overview")
 
@@ -488,6 +488,7 @@ st.markdown(f"""
     © 2026 Diksha Tiwari
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
