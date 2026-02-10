@@ -157,7 +157,7 @@ if st.session_state.hospital == "Hospital1":
     c1.metric("Total Appointments", len(df))
     c2.metric("Departments", df["department"].nunique())
     c3.metric("Completed", (df["status"] == "Completed").sum())
-    c4.metric("Pending", (df["status"] == "Pending").sum())
+    c4.metric("Beds Available", df["bed_availability"].sum())
 
 else:
     c1, c2, c3, c4 = st.columns(4)
@@ -299,6 +299,7 @@ st.markdown(f"""
     © 2026 Diksha Tiwari
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
