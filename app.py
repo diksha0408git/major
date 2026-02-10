@@ -337,7 +337,7 @@ elif page == "Correlation":
 # ===================== FORECASTING =====================
 elif page == "Forecasting":
 
-    st.title("🔮 Daily Admissions Forecast")
+    st.title("Daily Admissions Forecast")
 
     # Automatically detect date column
     date_cols = [c for c in df.columns if "date" in c.lower()]
@@ -362,7 +362,12 @@ elif page == "Forecasting":
     model = ARIMA(daily["admissions"], order=(1,1,1))
     model_fit = model.fit()
 
-    forecast_steps = 10
+    forecast_steps = st.slider(
+    "Select Forecast Days",
+    min_value=7,
+    max_value=30,
+    value=10
+    )
     forecast = model_fit.forecast(steps=forecast_steps)
 
     # Future dates
@@ -438,6 +443,7 @@ st.markdown(f"""
     © 2026 Diksha Tiwari
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
