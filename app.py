@@ -160,64 +160,72 @@ cat_cols = [c for c in df.select_dtypes(include="object").columns if c not in ig
 # ===================== DASHBOARD =====================
 if page == "Dashboard":
 
-    st.title("Hospital Overview")
+    st.title("🏥 Hospital Overview")
 
-    # ===== KPI ROW =====
-    k1, k2, k3, k4 = st.columns(4)
-
+    # ================= HOSPITAL 1 =================
     if st.session_state.hospital == "Hospital1":
 
-        k1.metric("Total Appointments", len(df))
-        k2.metric("Departments", df["department"].nunique())
-        k3.metric("Bed Availability", df["bed_availability"].sum())
-        k4.metric("Completed", (df["status"]=="Completed").sum())
+        st.subheader("📊 Appointment Overview")
 
+        c1, c2, c3, c4 = st.columns(4)
+
+        c1.metric("Total Appointments", len(df))
+        c2.metric("Departments", df["department"].nunique() if "department" in df.columns else "N/A")
+        c3.metric("Completed", df["status"].eq("Completed").sum() if "status" in df.columns else "N/A")
+        c4.metric("Beds Available", df["bed_availability"].sum() if "bed_availability" in df.columns else "N/A")
+
+
+        col1, col2 = st.columns(2)
+
+        # Department Bar Chart
+        if "department" in df.columns:
+            with col1:
+                fig, ax = plt.subplots()
+                df["department"].value_counts().plot.bar(ax=ax)
+                ax.set_title("Appointments by Department")
+                st.pyplot(fig)
+
+        # Status Pie Chart
+        if "status" in df.columns:
+            with col2:
+                fig, ax = plt.subplots()
+                df["status"].value_counts().plot.pie(autopct="%1.1f%%", ax=ax)
+                ax.set_ylabel("")
+                ax.set_title("Appointment Status")
+                st.pyplot(fig)
+
+
+    # ================= HOSPITAL 2 =================
     else:
 
-        k1.metric("Total Patients", len(df))
-        k2.metric("Average Age", round(df["age"].mean(),1))
-        k3.metric("Departments", df["department"].nunique())
-        k4.metric("Beds Available", df["bed_availability"].sum())
+        st.subheader("🧑‍⚕ Patient Overview")
+
+        c1, c2, c3, c4 = st.columns(4)
+
+        c1.metric("Total Patients", len(df))
+        c2.metric("Average Age", round(df["age"].mean(),1) if "age" in df.columns else "N/A")
+        c3.metric("Departments", df["department"].nunique() if "department" in df.columns else "N/A")
+        c4.metric("Beds Available", df["bed_availability"].sum() if "bed_availability" in df.columns else "N/A")
 
 
-    st.markdown("---")
+        col1, col2 = st.columns(2)
 
+        # Gender Bar Chart
+        if "gender" in df.columns:
+            with col1:
+                fig, ax = plt.subplots()
+                df["gender"].value_counts().plot.bar(ax=ax)
+                ax.set_title("Gender Distribution")
+                st.pyplot(fig)
 
-    # ===== CHART ROW 1 =====
-    col1, col2 = st.columns(2)
-
-    with col1:
-        st.subheader("Department Distribution")
-        fig, ax = plt.subplots()
-        df["department"].value_counts().plot.bar(ax=ax)
-        st.pyplot(fig)
-
-    with col2:
-        st.subheader("Status Ratio")
-        fig, ax = plt.subplots()
-        df["status"].value_counts().plot.pie(autopct="%1.1f%%", ax=ax)
-        ax.set_ylabel("")
-        st.pyplot(fig)
-
-
-    # ===== CHART ROW 2 =====
-    col3, col4 = st.columns(2)
-
-    if "age" in df.columns:
-
-        with col3:
-            st.subheader("Age Distribution")
-            fig, ax = plt.subplots()
-            ax.hist(df["age"], bins=20)
-            st.pyplot(fig)
-
-        with col4:
-            st.subheader("Age vs Appointment Index")
-            fig, ax = plt.subplots()
-            ax.scatter(range(len(df)), df["age"])
-            ax.set_xlabel("Appointment Index")
-            ax.set_ylabel("Age")
-            st.pyplot(fig)
+        # Department Pie Chart
+        if "department" in df.columns:
+            with col2:
+                fig, ax = plt.subplots()
+                df["department"].value_counts().plot.pie(autopct="%1.1f%%", ax=ax)
+                ax.set_ylabel("")
+                ax.set_title("Department Distribution")
+                st.pyplot(fig)
 
 # ===================== EDA =====================
 elif page == "EDA":
@@ -470,6 +478,7 @@ st.markdown(f"""
     © 2026 Diksha Tiwari
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
