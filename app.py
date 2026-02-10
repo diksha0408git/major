@@ -3,6 +3,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import plotly.express as px
+import plotly.graph_objects as go
 import matplotlib.pyplot as plt
 import seaborn as sns
 import sqlite3
@@ -437,6 +438,7 @@ st.markdown(f"""
     © 2026 Diksha Tiwari
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
