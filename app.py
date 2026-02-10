@@ -319,36 +319,95 @@ elif page == "Visualizations":
                 st.plotly_chart(fig, use_container_width=True)
 # ===================== CORRELATION =====================
 elif page == "Correlation":
-    st.title("Correlation Heatmap")
-    num_df = df.select_dtypes(include=np.number)
-    fig, ax = plt.subplots(figsize=(10, 6))
-    sns.heatmap(num_df.corr(), annot=True, cmap="RdYlBu", ax=ax)
-    st.pyplot(fig)
+
+    st.title("Correlation Matrix")
+
+    corr = df.select_dtypes(include=np.number).corr()
+
+    fig = px.imshow(
+        corr,
+        text_auto=True,
+        aspect="auto",
+        title="Correlation Heatmap"
+    )
+
+    st.plotly_chart(fig, use_container_width=True)
 
 # ===================== FORECASTING =====================
 elif page == "Forecasting":
-    st.title("Forecasting (ARIMA)")
 
-    num_cols = df.select_dtypes(include=np.number).columns.tolist()
-    target = st.selectbox("Select Column", num_cols)
+    st.title("🔮 Daily Admissions Forecast")
 
-    series = df[target].dropna()
+    # Automatically detect date column
+    date_cols = [c for c in df.columns if "date" in c.lower()]
 
-    if len(series) < 20:
-        st.warning("Not enough data for forecasting")
-    else:
-        model = ARIMA(series, order=(1,1,1))
-        model_fit = model.fit()
-        forecast = model_fit.forecast(steps=10)
+    if not date_cols:
+        st.warning("No date column found for forecasting.")
+        st.stop()
 
-        st.write("Next 10 Predictions")
-        st.write(forecast)
+    date_col = date_cols[0]
 
-        fig, ax = plt.subplots()
-        ax.plot(series.values, label="Actual")
-        ax.plot(range(len(series), len(series)+10), forecast, label="Forecast")
-        ax.legend()
-        st.pyplot(fig)
+    # Convert to datetime
+    df[date_col] = pd.to_datetime(df[date_col])
+
+    # Create daily count (VERY IMPORTANT for hospital analytics)
+    daily = df.groupby(date_col).size().reset_index(name="admissions")
+
+    if len(daily) < 20:
+        st.warning("Not enough data for forecasting.")
+        st.stop()
+
+    # ================= ARIMA =================
+    model = ARIMA(daily["admissions"], order=(1,1,1))
+    model_fit = model.fit()
+
+    forecast_steps = 10
+    forecast = model_fit.forecast(steps=forecast_steps)
+
+    # Future dates
+    future_dates = pd.date_range(
+        start=daily[date_col].max(),
+        periods=forecast_steps+1,
+        freq="D"
+    )[1:]
+
+    # ================= INTERACTIVE PLOT =================
+    fig = go.Figure()
+
+    # Actual line
+    fig.add_trace(go.Scatter(
+        x=daily[date_col],
+        y=daily["admissions"],
+        mode='lines',
+        name='Actual Admissions'
+    ))
+
+    # Forecast line
+    fig.add_trace(go.Scatter(
+        x=future_dates,
+        y=forecast,
+        mode='lines+markers',
+        name='Forecast',
+        line=dict(dash='dash')
+    ))
+
+    fig.update_layout(
+        title="Daily Patient Admission Forecast",
+        xaxis_title="Date",
+        yaxis_title="Number of Admissions",
+        hovermode="x unified"
+    )
+
+    st.plotly_chart(fig, use_container_width=True)
+
+    # Show forecast values
+    forecast_df = pd.DataFrame({
+        "Date": future_dates,
+        "Predicted Admissions": forecast.round(0)
+    })
+
+    st.subheader("Next 10 Days Prediction")
+    st.dataframe(forecast_df)
 
 # ===================== DATABASE =====================
 elif page == "Database":
@@ -378,6 +437,7 @@ st.markdown(f"""
     © 2026 Diksha Tiwari
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
