@@ -160,12 +160,12 @@ cat_cols = [c for c in df.select_dtypes(include="object").columns if c not in ig
 # ===================== DASHBOARD =====================
 if page == "Dashboard":
 
-    st.title("🏥 Hospital Overview")
+    st.title("Hospital Overview")
 
     # ================= HOSPITAL 1 =================
     if st.session_state.hospital == "Hospital1":
 
-        st.subheader("📊 Appointment Overview")
+        st.subheader("Appointment Overview")
 
         c1, c2, c3, c4 = st.columns(4)
 
@@ -198,7 +198,7 @@ if page == "Dashboard":
     # ================= HOSPITAL 2 =================
     else:
 
-        st.subheader("🧑‍⚕ Patient Overview")
+        st.subheader("Patient Overview")
 
         c1, c2, c3, c4 = st.columns(4)
 
@@ -237,7 +237,7 @@ elif page == "EDA":
 # ===================== VISUALIZATIONS =====================
 elif page == "Visualizations":
 
-    st.title("📊 Hospital Analytics Visualizations")
+    st.title("Hospital Analytics Visualizations")
 
     # ================= PATIENT DATA =================
     if st.session_state.hospital == "Hospital2":
@@ -478,6 +478,7 @@ st.markdown(f"""
     © 2026 Diksha Tiwari
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
