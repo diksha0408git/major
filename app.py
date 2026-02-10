@@ -226,24 +226,23 @@ if page == "Dashboard":
                 ax.set_ylabel("")
                 ax.set_title("Department Distribution")
                 st.pyplot(fig)
-        st.markdown("---")
-st.subheader("📊 Dataset Overview")
+    st.markdown("---")
+    st.subheader("📊 Dataset Overview")
 
-clean_df = df.dropna()
+    clean_df = df.dropna()
 
-col1, col2 = st.columns(2)
+    col1, col2 = st.columns(2)
 
-with col1:
-    st.write("Dataset Shape:", df.shape)
+    with col1:
+        st.write("Dataset Shape:", df.shape)
+    with col2:
+        st.write("After Cleaning:", clean_df.shape)
 
-with col2:
-    st.write("After Cleaning:", clean_df.shape)
+    with st.expander("👀 View Cleaned Data"):
+        st.dataframe(clean_df.head())
 
-with st.expander("👀 View Cleaned Data"):
-    st.dataframe(clean_df.head())
-
-with st.expander("📈 Statistical Summary"):
-    st.dataframe(clean_df.describe())
+    with st.expander("📈 Statistical Summary"):
+        st.dataframe(clean_df.describe())
 
 # ===================== VISUALIZATIONS =====================
 elif page == "Visualizations":
@@ -489,6 +488,7 @@ st.markdown(f"""
     © 2026 Diksha Tiwari
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
