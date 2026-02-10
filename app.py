@@ -227,7 +227,7 @@ if page == "Dashboard":
                 ax.set_title("Department Distribution")
                 st.pyplot(fig)
     st.markdown("---")
-    st.subheader("📊 Dataset Overview")
+    st.subheader("Dataset Overview")
 
     clean_df = df.dropna()
 
@@ -238,10 +238,10 @@ if page == "Dashboard":
     with col2:
         st.write("After Cleaning:", clean_df.shape)
 
-    with st.expander("👀 View Cleaned Data"):
+    with st.expander("View Cleaned Data"):
         st.dataframe(clean_df.head())
 
-    with st.expander("📈 Statistical Summary"):
+    with st.expander("Statistical Summary"):
         st.dataframe(clean_df.describe())
 
 # ===================== VISUALIZATIONS =====================
@@ -488,6 +488,7 @@ st.markdown(f"""
     © 2026 Diksha Tiwari
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
