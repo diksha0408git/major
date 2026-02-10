@@ -120,10 +120,10 @@ if not st.session_state["logged_in"]:
     st.stop()
 # ===================== LOAD DATA =====================
 if st.session_state.hospital == "Hospital1":
-    df = pd.read_csv("appointments_final.csv")   # hospital1 → appointments
+    df = pd.read_csv("appointments_cleaned.csv")   # hospital1 → appointments
     table_name = "appointments"
 else:
-    df = pd.read_csv("patients_final.csv")       # hospital2 → patients
+    df = pd.read_csv("patients_cleaned.csv")       # hospital2 → patients
     table_name = "patients"
 
 # ===================== SQLITE =====================
@@ -299,6 +299,7 @@ st.markdown(f"""
     © 2026 Diksha Tiwari
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
