@@ -23,21 +23,97 @@ if "hospital" not in st.session_state:
 
 # ===================== LOGIN PAGE =====================
 def login_page():
-    st.title("Hospital Analytics Login")
+    # 1. Custom CSS for a Premium Healthcare Feel
+    st.markdown("""
+        <style>
+        /* Background and Global Styles */
+        .stApp {
+            background: linear-gradient(to right, #ffffff, #f0f9ff);
+        }
+        
+        /* Centering the Login Container */
+        div.block-container {
+            padding-top: 5rem;
+            max-width: 800px;
+        }
 
-    with st.form("login_form"):
-        username = st.text_input("Username")
-        password = st.text_input("Password", type="password")
-        hospital = st.selectbox("Select Hospital", ["Hospital1", "Hospital2"])
-        login_btn = st.form_submit_button("Login")
+        /* Form Styling */
+        [data-testid="stForm"] {
+            border: none;
+            padding: 40px;
+            border-radius: 15px;
+            background-color: white;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
 
-    if login_btn:
-        if username == "admin" and password == "admin123":
-            st.session_state["logged_in"] = True
-            st.session_state["hospital"] = hospital
-            st.rerun()
-        else:
-            st.error("Invalid username or password")
+        /* Input Field Focus Colors */
+        input:focus {
+            border-color: #10b981 !important;
+            box-shadow: 0 0 0 0.2rem rgba(16, 185, 129, 0.25) !important;
+        }
+
+        /* Login Button Styling */
+        div.stButton > button:first-child {
+            background-color: #10b981;
+            color: white;
+            border: none;
+            padding: 0.6rem 2rem;
+            font-weight: bold;
+            border-radius: 8px;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+
+        div.stButton > button:hover {
+            background-color: #059669;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(16, 185, 129, 0.3);
+        }
+
+        /* Title and Subtitle */
+        .main-title {
+            color: #0f172a;
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+        .sub-title {
+            color: #64748b;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+        </style>
+    """, unsafe_allow_html=True)
+
+    # 2. Layout with a Graphic Image
+    col1, col2 = st.columns([1, 1.2], gap="large")
+
+    with col1:
+        # High-quality Healthcare Graphic
+        st.image("https://img.freepik.com/free-vector/doctors-concept-illustration_114360-1515.jpg", 
+                 caption="Data-Driven Healthcare Solutions")
+        st.markdown("<h2 class='main-title'>Hospital Analytics</h2>", unsafe_allow_html=True)
+        st.markdown("<p class='sub-title'>Predicting bed occupancy and analyzing patient trends with precision.</p>", unsafe_allow_html=True)
+
+    with col2:
+        # The actual Login Form
+        with st.form("login_form"):
+            st.markdown("### Secure Login")
+            username = st.text_input("Username", placeholder="admin")
+            password = st.text_input("Password", type="password", placeholder="••••••••")
+            hospital = st.selectbox("Assigning Hospital", ["Hospital1", "Hospital2"])
+            
+            st.markdown("<br>", unsafe_allow_html=True)
+            login_btn = st.form_submit_button("Access Dashboard")
+
+        if login_btn:
+            if username == "admin" and password == "admin123":
+                st.session_state["logged_in"] = True
+                st.session_state["hospital"] = hospital
+                st.rerun()
+            else:
+                st.error("Invalid Credentials. Please check and try again.")
+    
 # show login if not logged in
 if not st.session_state["logged_in"]:
     login_page()
@@ -223,6 +299,7 @@ st.markdown(f"""
     © 2026 Diksha Tiwari
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
