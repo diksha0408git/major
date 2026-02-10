@@ -140,7 +140,7 @@ st.sidebar.title("Navigation")
 
 page = st.sidebar.radio(
     "Go to",
-    ["Dashboard", "EDA", "Visualizations", "Correlation", "Forecasting", "Database"]
+    ["Dashboard", "Visualizations", "Correlation", "Forecasting", "Database"]
 )
 
 st.sidebar.markdown("---")
@@ -226,12 +226,23 @@ if page == "Dashboard":
                 ax.set_ylabel("")
                 ax.set_title("Department Distribution")
                 st.pyplot(fig)
+        st.markdown("---")
+st.subheader("📊 Dataset Overview")
 
-# ===================== EDA =====================
-elif page == "EDA":
-    st.title("Exploratory Data Analysis")
-    clean_df = df.dropna()
+clean_df = df.dropna()
+
+col1, col2 = st.columns(2)
+
+with col1:
+    st.write("Dataset Shape:", df.shape)
+
+with col2:
+    st.write("After Cleaning:", clean_df.shape)
+
+with st.expander("👀 View Cleaned Data"):
     st.dataframe(clean_df.head())
+
+with st.expander("📈 Statistical Summary"):
     st.dataframe(clean_df.describe())
 
 # ===================== VISUALIZATIONS =====================
@@ -478,6 +489,7 @@ st.markdown(f"""
     © 2026 Diksha Tiwari
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
